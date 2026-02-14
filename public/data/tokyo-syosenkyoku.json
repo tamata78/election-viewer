@@ -1,0 +1,127 @@
+{
+  "electionType": "小選挙区",
+  "electionDate": "2026-02-08",
+  "constituencies": [
+    {
+      "district": "1区",
+      "areas": ["千代田区", "新宿区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "山田 みき", "votes": 82622, "winner": true},
+        {"party": "中道改革連合", "candidate": "海江田 万里", "votes": 48830},
+        {"party": "参政党", "candidate": "吉川 りな", "votes": 25232},
+        {"party": "日本維新の会", "candidate": "春山 あすか", "votes": 20187},
+        {"party": "日本共産党", "candidate": "黒田 あさひ", "votes": 15295}
+      ],
+      "totalVotes": 192166,
+      "breakdown": [
+        {"area": "千代田区", "totalVotes": 35320},
+        {"area": "新宿区", "totalVotes": 156846}
+      ]
+    },
+    {
+      "district": "2区",
+      "areas": ["中央区", "台東区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "辻 清人", "votes": 84690, "winner": true},
+        {"party": "国民民主党", "candidate": "鳩山 紀一郎", "votes": 36021},
+        {"party": "チームみらい", "candidate": "土橋 あきひろ", "votes": 25018},
+        {"party": "日本維新の会", "candidate": "今村 充", "votes": 16609},
+        {"party": "日本共産党", "candidate": "ほその 真理", "votes": 15358},
+        {"party": "参政党", "candidate": "海江田 ゆうすけ", "votes": 13844},
+        {"party": "本人届出", "candidate": "天野 こころ", "votes": 4162}
+      ],
+      "totalVotes": 195702
+    },
+    {
+      "district": "3区",
+      "areas": ["品川区", "大島町", "利島村", "新島村", "神津島村", "三宅村", "御蔵島村", "八丈町", "青ヶ島村", "小笠原村"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "石原 ひろたか", "votes": 93159, "winner": true},
+        {"party": "中道改革連合", "candidate": "あべ 祐美子", "votes": 53584},
+        {"party": "国民民主党", "candidate": "石田 しんご", "votes": 34805},
+        {"party": "日本維新の会", "candidate": "石﨑 とおる", "votes": 19403},
+        {"party": "参政党", "candidate": "植木 ひろたか", "votes": 17544}
+      ],
+      "totalVotes": 218495
+    },
+    {
+      "district": "4区",
+      "areas": ["大田区4区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "平 将明", "votes": 114054, "winner": true},
+        {"party": "国民民主党", "candidate": "井戸 まさえ", "votes": 55610},
+        {"party": "参政党", "candidate": "しま えつこ", "votes": 31577},
+        {"party": "日本共産党", "candidate": "谷川 智行", "votes": 29667}
+      ],
+      "totalVotes": 230908
+    },
+    {
+      "district": "5区",
+      "areas": ["世田谷区5区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "若宮 けんじ", "votes": 89078, "winner": true},
+        {"party": "中道改革連合", "candidate": "手塚 よしお", "votes": 58164},
+        {"party": "国民民主党", "candidate": "くわずる ゆき子", "votes": 33140},
+        {"party": "日本維新の会", "candidate": "いなば 太郎", "votes": 27889},
+        {"party": "参政党", "candidate": "松岡 としこ", "votes": 19809}
+      ],
+      "totalVotes": 228080
+    },
+    {
+      "district": "6区",
+      "areas": ["世田谷区6区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "あぜもと しょうご", "votes": 90077, "winner": true},
+        {"party": "中道改革連合", "candidate": "落合 貴之", "votes": 79262},
+        {"party": "国民民主党", "candidate": "丸山 かつき", "votes": 43524},
+        {"party": "参政党", "candidate": "島村 なおき", "votes": 23362},
+        {"party": "本人届出", "candidate": "福村 康廣", "votes": 2424}
+      ],
+      "totalVotes": 238649
+    },
+    {
+      "district": "7区",
+      "areas": ["港区", "渋谷区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "丸川 珠代", "votes": 80421, "winner": true},
+        {"party": "中道改革連合", "candidate": "松尾 あきひろ", "votes": 52576},
+        {"party": "チームみらい", "candidate": "みねしま 侑也", "votes": 43335},
+        {"party": "国民民主党", "candidate": "入江 のぶこ", "votes": 21018},
+        {"party": "日本維新の会", "candidate": "渡辺 やすゆき", "votes": 19637},
+        {"party": "参政党", "candidate": "石川 ゆりか", "votes": 16337}
+      ],
+      "totalVotes": 233324
+    },
+    {
+      "district": "8区",
+      "areas": ["杉並区8区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "門 ひろこ", "votes": 108020, "winner": true},
+        {"party": "中道改革連合", "candidate": "吉田 はるみ", "votes": 77620},
+        {"party": "国民民主党", "candidate": "森田 一成", "votes": 26989},
+        {"party": "れいわ新選組", "candidate": "海保 とくま", "votes": 11419},
+        {"party": "参政党", "candidate": "永井 ばく", "votes": 10642},
+        {"party": "日本保守党", "candidate": "大谷 しろう", "votes": 8110},
+        {"party": "本人届出", "candidate": "藤原 ゆきひろ", "votes": 1111}
+      ],
+      "totalVotes": 243911
+    },
+    {
+      "district": "26区",
+      "areas": ["目黒区", "大田区26区"],
+      "candidates": [
+        {"party": "自由民主党", "candidate": "今岡 うえき", "votes": 92329, "winner": true},
+        {"party": "無所属", "candidate": "まつばら 仁", "votes": 82119},
+        {"party": "チームみらい", "candidate": "うさみ 登", "votes": 34706},
+        {"party": "国民民主党", "candidate": "坂元 ゆうき", "votes": 24307},
+        {"party": "日本共産党", "candidate": "松井 かな子", "votes": 19663},
+        {"party": "参政党", "candidate": "すがぬま けい子", "votes": 13072}
+      ],
+      "totalVotes": 266196,
+      "breakdown": [
+        {"area": "目黒区", "totalVotes": 142569},
+        {"area": "大田区26区", "totalVotes": 123627}
+      ]
+    }
+  ]
+}

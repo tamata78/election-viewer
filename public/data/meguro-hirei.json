@@ -1,0 +1,76 @@
+{
+  "electionType": "比例代表",
+  "region": "目黒区",
+  "electionDate": "2026-02-08",
+  "totalVoters": 144973,
+  "totalVotes": 143614,
+  "invalidVotes": 1346,
+  "parties": [
+    {
+      "number": 1,
+      "party": "れいわ新選組",
+      "votes": 3469,
+      "voteShare": 2.42
+    },
+    {
+      "number": 2,
+      "party": "国民民主党",
+      "votes": 15190,
+      "voteShare": 10.58
+    },
+    {
+      "number": 3,
+      "party": "日本保守党",
+      "votes": 4413,
+      "voteShare": 3.07
+    },
+    {
+      "number": 4,
+      "party": "日本共産党",
+      "votes": 7905,
+      "voteShare": 5.50
+    },
+    {
+      "number": 5,
+      "party": "中道改革連合",
+      "votes": 18958,
+      "voteShare": 13.20
+    },
+    {
+      "number": 6,
+      "party": "社会民主党",
+      "votes": 1614,
+      "voteShare": 1.12
+    },
+    {
+      "number": 7,
+      "party": "チームみらい",
+      "votes": 25883,
+      "voteShare": 18.02
+    },
+    {
+      "number": 8,
+      "party": "自由民主党",
+      "votes": 48035,
+      "voteShare": 33.45
+    },
+    {
+      "number": 9,
+      "party": "参政党",
+      "votes": 8011,
+      "voteShare": 5.58
+    },
+    {
+      "number": 10,
+      "party": "日本維新の会",
+      "votes": 8125,
+      "voteShare": 5.66
+    },
+    {
+      "number": 11,
+      "party": "減税日本・ゆうこく連合",
+      "votes": 2011,
+      "voteShare": 1.40
+    }
+  ]
+}

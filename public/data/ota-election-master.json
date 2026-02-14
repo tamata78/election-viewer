@@ -1,0 +1,281 @@
+{
+  "region": "大田区",
+  "data": {
+    "4区": {
+      "years": {
+        "2024": {
+          "year": 2024,
+          "electionDate": "2024-10-27",
+          "syosenkyoku": {
+            "totalVotes": 215731,
+            "results": [
+              {"party": "自由民主党", "votes": 86773, "rate": 40.22},
+              {"party": "国民民主党", "votes": 51810, "rate": 24.01},
+              {"party": "日本共産党", "votes": 32909, "rate": 15.26},
+              {"party": "日本維新の会", "votes": 32063, "rate": 14.86},
+              {"party": "参政党", "votes": 12176, "rate": 5.64}
+            ]
+          },
+          "hirei": {
+            "totalVotes": 219225,
+            "results": [
+              {"party": "自由民主党", "votes": 50847, "rate": 23.19},
+              {"party": "国民民主党", "votes": 37193, "rate": 16.97},
+              {"party": "立憲民主党", "votes": 32495, "rate": 14.82},
+              {"party": "公明党", "votes": 24666, "rate": 11.25},
+              {"party": "日本維新の会", "votes": 21345, "rate": 9.74},
+              {"party": "日本共産党", "votes": 19364, "rate": 8.83},
+              {"party": "れいわ新選組", "votes": 14337, "rate": 6.54},
+              {"party": "参政党", "votes": 8161, "rate": 3.72},
+              {"party": "日本保守党", "votes": 7168, "rate": 3.27},
+              {"party": "社会民主党", "votes": 2794, "rate": 1.27},
+              {"party": "みんなでつくる党", "votes": 855, "rate": 0.39}
+            ]
+          },
+          "districts": [
+            {"id": 19, "dayOfEligibleVoters": 9113, "dayOfVoters": 2111, "dayOfTurnoutRate": 23.17, "earlyVoters": 2111, "absenteeVoters": 0, "totalVoters": 4222, "totalTurnoutRate": 46.33},
+            {"id": 20, "dayOfEligibleVoters": 6181, "dayOfVoters": 1486, "dayOfTurnoutRate": 24.04, "earlyVoters": 1485, "absenteeVoters": 0, "totalVoters": 2971, "totalTurnoutRate": 48.07},
+            {"id": 21, "dayOfEligibleVoters": 11804, "dayOfVoters": 2821, "dayOfTurnoutRate": 23.90, "earlyVoters": 2820, "absenteeVoters": 0, "totalVoters": 5641, "totalTurnoutRate": 47.79},
+            {"id": 22, "dayOfEligibleVoters": 4702, "dayOfVoters": 1224, "dayOfTurnoutRate": 26.03, "earlyVoters": 1223, "absenteeVoters": 0, "totalVoters": 2447, "totalTurnoutRate": 52.04},
+            {"id": 23, "dayOfEligibleVoters": 7155, "dayOfVoters": 1946, "dayOfTurnoutRate": 27.20, "earlyVoters": 1946, "absenteeVoters": 0, "totalVoters": 3892, "totalTurnoutRate": 54.40},
+            {"id": 24, "dayOfEligibleVoters": 6671, "dayOfVoters": 1631, "dayOfTurnoutRate": 24.45, "earlyVoters": 1630, "absenteeVoters": 0, "totalVoters": 3261, "totalTurnoutRate": 48.88},
+            {"id": 25, "dayOfEligibleVoters": 9469, "dayOfVoters": 2434, "dayOfTurnoutRate": 25.71, "earlyVoters": 2433, "absenteeVoters": 0, "totalVoters": 4867, "totalTurnoutRate": 51.40},
+            {"id": 26, "dayOfEligibleVoters": 10976, "dayOfVoters": 2756, "dayOfTurnoutRate": 25.11, "earlyVoters": 2755, "absenteeVoters": 0, "totalVoters": 5511, "totalTurnoutRate": 50.21},
+            {"id": 27, "dayOfEligibleVoters": 10863, "dayOfVoters": 2868, "dayOfTurnoutRate": 26.40, "earlyVoters": 2867, "absenteeVoters": 0, "totalVoters": 5735, "totalTurnoutRate": 52.79},
+            {"id": 28, "dayOfEligibleVoters": 10765, "dayOfVoters": 2900, "dayOfTurnoutRate": 26.94, "earlyVoters": 2900, "absenteeVoters": 0, "totalVoters": 5800, "totalTurnoutRate": 53.88},
+            {"id": 29, "dayOfEligibleVoters": 13054, "dayOfVoters": 3960, "dayOfTurnoutRate": 30.33, "earlyVoters": 3960, "absenteeVoters": 0, "totalVoters": 7920, "totalTurnoutRate": 60.67},
+            {"id": 30, "dayOfEligibleVoters": 8557, "dayOfVoters": 2480, "dayOfTurnoutRate": 28.98, "earlyVoters": 2479, "absenteeVoters": 0, "totalVoters": 4959, "totalTurnoutRate": 57.95},
+            {"id": 31, "dayOfEligibleVoters": 9224, "dayOfVoters": 2496, "dayOfTurnoutRate": 27.06, "earlyVoters": 2495, "absenteeVoters": 0, "totalVoters": 4991, "totalTurnoutRate": 54.11},
+            {"id": 32, "dayOfEligibleVoters": 10579, "dayOfVoters": 2913, "dayOfTurnoutRate": 27.54, "earlyVoters": 2913, "absenteeVoters": 0, "totalVoters": 5826, "totalTurnoutRate": 55.07},
+            {"id": 33, "dayOfEligibleVoters": 11837, "dayOfVoters": 3191, "dayOfTurnoutRate": 26.96, "earlyVoters": 3190, "absenteeVoters": 0, "totalVoters": 6381, "totalTurnoutRate": 53.91},
+            {"id": 34, "dayOfEligibleVoters": 10938, "dayOfVoters": 3134, "dayOfTurnoutRate": 28.65, "earlyVoters": 3133, "absenteeVoters": 0, "totalVoters": 6267, "totalTurnoutRate": 57.30},
+            {"id": 35, "dayOfEligibleVoters": 10913, "dayOfVoters": 2958, "dayOfTurnoutRate": 27.11, "earlyVoters": 2958, "absenteeVoters": 0, "totalVoters": 5916, "totalTurnoutRate": 54.21},
+            {"id": 36, "dayOfEligibleVoters": 12000, "dayOfVoters": 3268, "dayOfTurnoutRate": 27.23, "earlyVoters": 3268, "absenteeVoters": 0, "totalVoters": 6536, "totalTurnoutRate": 54.47},
+            {"id": 37, "dayOfEligibleVoters": 5531, "dayOfVoters": 1457, "dayOfTurnoutRate": 26.34, "earlyVoters": 1456, "absenteeVoters": 0, "totalVoters": 2913, "totalTurnoutRate": 52.67},
+            {"id": 38, "dayOfEligibleVoters": 5742, "dayOfVoters": 1507, "dayOfTurnoutRate": 26.24, "earlyVoters": 1507, "absenteeVoters": 0, "totalVoters": 3014, "totalTurnoutRate": 52.49},
+            {"id": 39, "dayOfEligibleVoters": 8074, "dayOfVoters": 2308, "dayOfTurnoutRate": 28.58, "earlyVoters": 2307, "absenteeVoters": 0, "totalVoters": 4615, "totalTurnoutRate": 57.16},
+            {"id": 40, "dayOfEligibleVoters": 10544, "dayOfVoters": 2783, "dayOfTurnoutRate": 26.39, "earlyVoters": 2782, "absenteeVoters": 0, "totalVoters": 5565, "totalTurnoutRate": 52.78},
+            {"id": 41, "dayOfEligibleVoters": 8044, "dayOfVoters": 2066, "dayOfTurnoutRate": 25.68, "earlyVoters": 2065, "absenteeVoters": 0, "totalVoters": 4131, "totalTurnoutRate": 51.36},
+            {"id": 42, "dayOfEligibleVoters": 10586, "dayOfVoters": 2647, "dayOfTurnoutRate": 25.00, "earlyVoters": 2646, "absenteeVoters": 0, "totalVoters": 5293, "totalTurnoutRate": 50.00},
+            {"id": 43, "dayOfEligibleVoters": 7693, "dayOfVoters": 2032, "dayOfTurnoutRate": 26.41, "earlyVoters": 2031, "absenteeVoters": 0, "totalVoters": 4063, "totalTurnoutRate": 52.81},
+            {"id": 44, "dayOfEligibleVoters": 7377, "dayOfVoters": 1847, "dayOfTurnoutRate": 25.04, "earlyVoters": 1846, "absenteeVoters": 0, "totalVoters": 3693, "totalTurnoutRate": 50.06},
+            {"id": 45, "dayOfEligibleVoters": 9175, "dayOfVoters": 2411, "dayOfTurnoutRate": 26.28, "earlyVoters": 2411, "absenteeVoters": 0, "totalVoters": 4822, "totalTurnoutRate": 52.56},
+            {"id": 46, "dayOfEligibleVoters": 8012, "dayOfVoters": 1962, "dayOfTurnoutRate": 24.49, "earlyVoters": 1961, "absenteeVoters": 0, "totalVoters": 3923, "totalTurnoutRate": 48.96},
+            {"id": 47, "dayOfEligibleVoters": 11024, "dayOfVoters": 2708, "dayOfTurnoutRate": 24.57, "earlyVoters": 2708, "absenteeVoters": 0, "totalVoters": 5416, "totalTurnoutRate": 49.13},
+            {"id": 48, "dayOfEligibleVoters": 8511, "dayOfVoters": 1935, "dayOfTurnoutRate": 22.73, "earlyVoters": 1935, "absenteeVoters": 0, "totalVoters": 3870, "totalTurnoutRate": 45.47},
+            {"id": 49, "dayOfEligibleVoters": 4399, "dayOfVoters": 894, "dayOfTurnoutRate": 20.32, "earlyVoters": 894, "absenteeVoters": 0, "totalVoters": 1788, "totalTurnoutRate": 40.65},
+            {"id": 50, "dayOfEligibleVoters": 7447, "dayOfVoters": 1788, "dayOfTurnoutRate": 24.01, "earlyVoters": 1788, "absenteeVoters": 0, "totalVoters": 3576, "totalTurnoutRate": 48.02},
+            {"id": 51, "dayOfEligibleVoters": 9791, "dayOfVoters": 2411, "dayOfTurnoutRate": 24.62, "earlyVoters": 2411, "absenteeVoters": 0, "totalVoters": 4822, "totalTurnoutRate": 49.25},
+            {"id": 52, "dayOfEligibleVoters": 11179, "dayOfVoters": 2909, "dayOfTurnoutRate": 26.02, "earlyVoters": 2909, "absenteeVoters": 0, "totalVoters": 5818, "totalTurnoutRate": 52.04},
+            {"id": 53, "dayOfEligibleVoters": 11162, "dayOfVoters": 2820, "dayOfTurnoutRate": 25.26, "earlyVoters": 2819, "absenteeVoters": 0, "totalVoters": 5639, "totalTurnoutRate": 50.52},
+            {"id": 54, "dayOfEligibleVoters": 8389, "dayOfVoters": 2196, "dayOfTurnoutRate": 26.18, "earlyVoters": 2195, "absenteeVoters": 0, "totalVoters": 4391, "totalTurnoutRate": 52.34},
+            {"id": 55, "dayOfEligibleVoters": 6037, "dayOfVoters": 1613, "dayOfTurnoutRate": 26.72, "earlyVoters": 1613, "absenteeVoters": 0, "totalVoters": 3226, "totalTurnoutRate": 53.44},
+            {"id": 56, "dayOfEligibleVoters": 7994, "dayOfVoters": 2098, "dayOfTurnoutRate": 26.24, "earlyVoters": 2098, "absenteeVoters": 0, "totalVoters": 4196, "totalTurnoutRate": 52.49},
+            {"id": 57, "dayOfEligibleVoters": 9021, "dayOfVoters": 2405, "dayOfTurnoutRate": 26.66, "earlyVoters": 2404, "absenteeVoters": 0, "totalVoters": 4809, "totalTurnoutRate": 53.31},
+            {"id": 58, "dayOfEligibleVoters": 10393, "dayOfVoters": 2706, "dayOfTurnoutRate": 26.04, "earlyVoters": 2705, "absenteeVoters": 0, "totalVoters": 5411, "totalTurnoutRate": 52.06},
+            {"id": 59, "dayOfEligibleVoters": 9547, "dayOfVoters": 2551, "dayOfTurnoutRate": 26.72, "earlyVoters": 2550, "absenteeVoters": 0, "totalVoters": 5101, "totalTurnoutRate": 53.43},
+            {"id": 60, "dayOfEligibleVoters": 6790, "dayOfVoters": 1831, "dayOfTurnoutRate": 26.97, "earlyVoters": 1831, "absenteeVoters": 0, "totalVoters": 3662, "totalTurnoutRate": 53.93},
+            {"id": 61, "dayOfEligibleVoters": 6172, "dayOfVoters": 1741, "dayOfTurnoutRate": 28.21, "earlyVoters": 1740, "absenteeVoters": 0, "totalVoters": 3481, "totalTurnoutRate": 56.40},
+            {"id": 62, "dayOfEligibleVoters": 10508, "dayOfVoters": 2628, "dayOfTurnoutRate": 25.01, "earlyVoters": 2627, "absenteeVoters": 0, "totalVoters": 5255, "totalTurnoutRate": 50.01},
+            {"id": 63, "dayOfEligibleVoters": 4346, "dayOfVoters": 1145, "dayOfTurnoutRate": 26.35, "earlyVoters": 1144, "absenteeVoters": 0, "totalVoters": 2289, "totalTurnoutRate": 52.67},
+            {"id": 64, "dayOfEligibleVoters": 9136, "dayOfVoters": 2579, "dayOfTurnoutRate": 28.23, "earlyVoters": 2578, "absenteeVoters": 0, "totalVoters": 5157, "totalTurnoutRate": 56.45},
+            {"id": 65, "dayOfEligibleVoters": 9569, "dayOfVoters": 2648, "dayOfTurnoutRate": 27.67, "earlyVoters": 2648, "absenteeVoters": 0, "totalVoters": 5296, "totalTurnoutRate": 55.35},
+            {"id": 66, "dayOfEligibleVoters": 10041, "dayOfVoters": 2577, "dayOfTurnoutRate": 25.66, "earlyVoters": 2576, "absenteeVoters": 0, "totalVoters": 5153, "totalTurnoutRate": 51.32}
+          ]
+        },
+        "2026": {
+          "year": 2026,
+          "electionDate": "2026-02-08",
+          "syosenkyoku": {
+            "totalVotes": 230908,
+            "results": [
+              {"party": "自由民主党", "votes": 114054, "rate": 49.39},
+              {"party": "国民民主党", "votes": 55610, "rate": 24.08},
+              {"party": "参政党", "votes": 31577, "rate": 13.68},
+              {"party": "日本共産党", "votes": 29667, "rate": 12.85}
+            ]
+          },
+          "hirei": {
+            "totalVotes": 240373,
+            "results": [
+              {"party": "自由民主党", "votes": 80356, "rate": 33.43},
+              {"party": "中道改革連合", "votes": 36038, "rate": 14.99},
+              {"party": "国民民主党", "votes": 29504, "rate": 12.28},
+              {"party": "チームみらい", "votes": 28716, "rate": 11.95},
+              {"party": "参政党", "votes": 17602, "rate": 7.32},
+              {"party": "日本共産党", "votes": 14958, "rate": 6.22},
+              {"party": "日本維新の会", "votes": 14912, "rate": 6.20},
+              {"party": "日本保守党", "votes": 7655, "rate": 3.19},
+              {"party": "れいわ新選組", "votes": 5464, "rate": 2.27},
+              {"party": "減税日本・ゆうこく連合", "votes": 2818, "rate": 1.17},
+              {"party": "社会民主党", "votes": 2350, "rate": 0.98}
+            ]
+          },
+          "districts": [
+            {"id": 19, "dayOfEligibleVoters": 9113, "dayOfVoters": 2533, "dayOfTurnoutRate": 27.80, "earlyVoters": 2110, "absenteeVoters": 0, "totalVoters": 4643, "totalTurnoutRate": 50.95},
+            {"id": 20, "dayOfEligibleVoters": 6181, "dayOfVoters": 1783, "dayOfTurnoutRate": 28.85, "earlyVoters": 1485, "absenteeVoters": 0, "totalVoters": 3268, "totalTurnoutRate": 52.87},
+            {"id": 21, "dayOfEligibleVoters": 11804, "dayOfVoters": 3385, "dayOfTurnoutRate": 28.68, "earlyVoters": 2820, "absenteeVoters": 0, "totalVoters": 6205, "totalTurnoutRate": 52.57},
+            {"id": 22, "dayOfEligibleVoters": 4702, "dayOfVoters": 1468, "dayOfTurnoutRate": 31.22, "earlyVoters": 1223, "absenteeVoters": 0, "totalVoters": 2691, "totalTurnoutRate": 57.23},
+            {"id": 23, "dayOfEligibleVoters": 7155, "dayOfVoters": 2335, "dayOfTurnoutRate": 32.63, "earlyVoters": 1946, "absenteeVoters": 0, "totalVoters": 4281, "totalTurnoutRate": 59.83},
+            {"id": 24, "dayOfEligibleVoters": 6671, "dayOfVoters": 1957, "dayOfTurnoutRate": 29.34, "earlyVoters": 1630, "absenteeVoters": 0, "totalVoters": 3587, "totalTurnoutRate": 53.77},
+            {"id": 25, "dayOfEligibleVoters": 9469, "dayOfVoters": 2920, "dayOfTurnoutRate": 30.84, "earlyVoters": 2433, "absenteeVoters": 0, "totalVoters": 5353, "totalTurnoutRate": 56.53},
+            {"id": 26, "dayOfEligibleVoters": 10976, "dayOfVoters": 3307, "dayOfTurnoutRate": 30.13, "earlyVoters": 2755, "absenteeVoters": 0, "totalVoters": 6062, "totalTurnoutRate": 55.23},
+            {"id": 27, "dayOfEligibleVoters": 10863, "dayOfVoters": 3441, "dayOfTurnoutRate": 31.68, "earlyVoters": 2867, "absenteeVoters": 0, "totalVoters": 6308, "totalTurnoutRate": 58.07},
+            {"id": 28, "dayOfEligibleVoters": 10765, "dayOfVoters": 3480, "dayOfTurnoutRate": 32.33, "earlyVoters": 2900, "absenteeVoters": 0, "totalVoters": 6380, "totalTurnoutRate": 59.27},
+            {"id": 29, "dayOfEligibleVoters": 13054, "dayOfVoters": 4752, "dayOfTurnoutRate": 36.40, "earlyVoters": 3960, "absenteeVoters": 0, "totalVoters": 8712, "totalTurnoutRate": 66.74},
+            {"id": 30, "dayOfEligibleVoters": 8557, "dayOfVoters": 2975, "dayOfTurnoutRate": 34.77, "earlyVoters": 2479, "absenteeVoters": 0, "totalVoters": 5454, "totalTurnoutRate": 63.74},
+            {"id": 31, "dayOfEligibleVoters": 9224, "dayOfVoters": 2994, "dayOfTurnoutRate": 32.46, "earlyVoters": 2495, "absenteeVoters": 0, "totalVoters": 5489, "totalTurnoutRate": 59.51},
+            {"id": 32, "dayOfEligibleVoters": 10579, "dayOfVoters": 3495, "dayOfTurnoutRate": 33.04, "earlyVoters": 2913, "absenteeVoters": 0, "totalVoters": 6408, "totalTurnoutRate": 60.57},
+            {"id": 33, "dayOfEligibleVoters": 11837, "dayOfVoters": 3828, "dayOfTurnoutRate": 32.34, "earlyVoters": 3190, "absenteeVoters": 0, "totalVoters": 7018, "totalTurnoutRate": 59.29},
+            {"id": 34, "dayOfEligibleVoters": 10938, "dayOfVoters": 3760, "dayOfTurnoutRate": 34.38, "earlyVoters": 3133, "absenteeVoters": 0, "totalVoters": 6893, "totalTurnoutRate": 63.02},
+            {"id": 35, "dayOfEligibleVoters": 10913, "dayOfVoters": 3549, "dayOfTurnoutRate": 32.52, "earlyVoters": 2958, "absenteeVoters": 0, "totalVoters": 6507, "totalTurnoutRate": 59.63},
+            {"id": 36, "dayOfEligibleVoters": 12000, "dayOfVoters": 3921, "dayOfTurnoutRate": 32.68, "earlyVoters": 3268, "absenteeVoters": 0, "totalVoters": 7189, "totalTurnoutRate": 59.91},
+            {"id": 37, "dayOfEligibleVoters": 5531, "dayOfVoters": 1747, "dayOfTurnoutRate": 31.59, "earlyVoters": 1456, "absenteeVoters": 0, "totalVoters": 3203, "totalTurnoutRate": 57.92},
+            {"id": 38, "dayOfEligibleVoters": 5742, "dayOfVoters": 1808, "dayOfTurnoutRate": 31.49, "earlyVoters": 1507, "absenteeVoters": 0, "totalVoters": 3315, "totalTurnoutRate": 57.73},
+            {"id": 39, "dayOfEligibleVoters": 8074, "dayOfVoters": 2769, "dayOfTurnoutRate": 34.29, "earlyVoters": 2307, "absenteeVoters": 0, "totalVoters": 5076, "totalTurnoutRate": 62.87},
+            {"id": 40, "dayOfEligibleVoters": 10544, "dayOfVoters": 3339, "dayOfTurnoutRate": 31.67, "earlyVoters": 2782, "absenteeVoters": 0, "totalVoters": 6121, "totalTurnoutRate": 58.06},
+            {"id": 41, "dayOfEligibleVoters": 8044, "dayOfVoters": 2479, "dayOfTurnoutRate": 30.82, "earlyVoters": 2065, "absenteeVoters": 0, "totalVoters": 4544, "totalTurnoutRate": 56.49},
+            {"id": 42, "dayOfEligibleVoters": 10586, "dayOfVoters": 3176, "dayOfTurnoutRate": 30.00, "earlyVoters": 2646, "absenteeVoters": 0, "totalVoters": 5822, "totalTurnoutRate": 55.00},
+            {"id": 43, "dayOfEligibleVoters": 7693, "dayOfVoters": 2438, "dayOfTurnoutRate": 31.69, "earlyVoters": 2031, "absenteeVoters": 0, "totalVoters": 4469, "totalTurnoutRate": 58.09},
+            {"id": 44, "dayOfEligibleVoters": 7377, "dayOfVoters": 2216, "dayOfTurnoutRate": 30.04, "earlyVoters": 1846, "absenteeVoters": 0, "totalVoters": 4062, "totalTurnoutRate": 55.06},
+            {"id": 45, "dayOfEligibleVoters": 9175, "dayOfVoters": 2893, "dayOfTurnoutRate": 31.53, "earlyVoters": 2411, "absenteeVoters": 0, "totalVoters": 5304, "totalTurnoutRate": 57.81},
+            {"id": 46, "dayOfEligibleVoters": 8012, "dayOfVoters": 2354, "dayOfTurnoutRate": 29.38, "earlyVoters": 1961, "absenteeVoters": 0, "totalVoters": 4315, "totalTurnoutRate": 53.86},
+            {"id": 47, "dayOfEligibleVoters": 11024, "dayOfVoters": 3249, "dayOfTurnoutRate": 29.47, "earlyVoters": 2708, "absenteeVoters": 0, "totalVoters": 5957, "totalTurnoutRate": 54.04},
+            {"id": 48, "dayOfEligibleVoters": 8511, "dayOfVoters": 2322, "dayOfTurnoutRate": 27.28, "earlyVoters": 1935, "absenteeVoters": 0, "totalVoters": 4257, "totalTurnoutRate": 50.02},
+            {"id": 49, "dayOfEligibleVoters": 4399, "dayOfVoters": 1072, "dayOfTurnoutRate": 24.37, "earlyVoters": 894, "absenteeVoters": 0, "totalVoters": 1966, "totalTurnoutRate": 44.69},
+            {"id": 50, "dayOfEligibleVoters": 7447, "dayOfVoters": 2145, "dayOfTurnoutRate": 28.80, "earlyVoters": 1788, "absenteeVoters": 0, "totalVoters": 3933, "totalTurnoutRate": 52.81},
+            {"id": 51, "dayOfEligibleVoters": 9791, "dayOfVoters": 2893, "dayOfTurnoutRate": 29.55, "earlyVoters": 2411, "absenteeVoters": 0, "totalVoters": 5304, "totalTurnoutRate": 54.17},
+            {"id": 52, "dayOfEligibleVoters": 11179, "dayOfVoters": 3490, "dayOfTurnoutRate": 31.22, "earlyVoters": 2909, "absenteeVoters": 0, "totalVoters": 6399, "totalTurnoutRate": 57.24},
+            {"id": 53, "dayOfEligibleVoters": 11162, "dayOfVoters": 3383, "dayOfTurnoutRate": 30.31, "earlyVoters": 2819, "absenteeVoters": 0, "totalVoters": 6202, "totalTurnoutRate": 55.56},
+            {"id": 54, "dayOfEligibleVoters": 8389, "dayOfVoters": 2634, "dayOfTurnoutRate": 31.40, "earlyVoters": 2195, "absenteeVoters": 0, "totalVoters": 4829, "totalTurnoutRate": 57.56},
+            {"id": 55, "dayOfEligibleVoters": 6037, "dayOfVoters": 1935, "dayOfTurnoutRate": 32.05, "earlyVoters": 1613, "absenteeVoters": 0, "totalVoters": 3548, "totalTurnoutRate": 58.77},
+            {"id": 56, "dayOfEligibleVoters": 7994, "dayOfVoters": 2517, "dayOfTurnoutRate": 31.49, "earlyVoters": 2098, "absenteeVoters": 0, "totalVoters": 4615, "totalTurnoutRate": 57.73},
+            {"id": 57, "dayOfEligibleVoters": 9021, "dayOfVoters": 2885, "dayOfTurnoutRate": 31.98, "earlyVoters": 2404, "absenteeVoters": 0, "totalVoters": 5289, "totalTurnoutRate": 58.63},
+            {"id": 58, "dayOfEligibleVoters": 10393, "dayOfVoters": 3246, "dayOfTurnoutRate": 31.23, "earlyVoters": 2705, "absenteeVoters": 0, "totalVoters": 5951, "totalTurnoutRate": 57.26},
+            {"id": 59, "dayOfEligibleVoters": 9547, "dayOfVoters": 3060, "dayOfTurnoutRate": 32.05, "earlyVoters": 2550, "absenteeVoters": 0, "totalVoters": 5610, "totalTurnoutRate": 58.76},
+            {"id": 60, "dayOfEligibleVoters": 6790, "dayOfVoters": 2197, "dayOfTurnoutRate": 32.36, "earlyVoters": 1831, "absenteeVoters": 0, "totalVoters": 4028, "totalTurnoutRate": 59.32},
+            {"id": 61, "dayOfEligibleVoters": 6172, "dayOfVoters": 2088, "dayOfTurnoutRate": 33.83, "earlyVoters": 1740, "absenteeVoters": 0, "totalVoters": 3828, "totalTurnoutRate": 62.02},
+            {"id": 62, "dayOfEligibleVoters": 10508, "dayOfVoters": 3153, "dayOfTurnoutRate": 30.01, "earlyVoters": 2627, "absenteeVoters": 0, "totalVoters": 5780, "totalTurnoutRate": 55.00},
+            {"id": 63, "dayOfEligibleVoters": 4346, "dayOfVoters": 1373, "dayOfTurnoutRate": 31.59, "earlyVoters": 1144, "absenteeVoters": 0, "totalVoters": 2517, "totalTurnoutRate": 57.92},
+            {"id": 64, "dayOfEligibleVoters": 9136, "dayOfVoters": 3094, "dayOfTurnoutRate": 33.87, "earlyVoters": 2578, "absenteeVoters": 0, "totalVoters": 5672, "totalTurnoutRate": 62.08},
+            {"id": 65, "dayOfEligibleVoters": 9569, "dayOfVoters": 3177, "dayOfTurnoutRate": 33.20, "earlyVoters": 2648, "absenteeVoters": 0, "totalVoters": 5825, "totalTurnoutRate": 60.88},
+            {"id": 66, "dayOfEligibleVoters": 10041, "dayOfVoters": 3092, "dayOfTurnoutRate": 30.79, "earlyVoters": 2576, "absenteeVoters": 0, "totalVoters": 5668, "totalTurnoutRate": 56.45}
+          ]
+        }
+      }
+    },
+    "26区": {
+      "years": {
+        "2024": {
+          "year": 2024,
+          "electionDate": "2024-10-27",
+          "syosenkyoku": {
+            "totalVotes": 112596,
+            "results": [
+              {"party": "立憲民主党", "votes": 57408, "rate": 50.98},
+              {"party": "自由民主党", "votes": 30034, "rate": 26.67},
+              {"party": "日本維新の会", "votes": 12485, "rate": 11.09},
+              {"party": "参政党", "votes": 7086, "rate": 6.29},
+              {"party": "日本共産党", "votes": 5583, "rate": 4.96}
+            ]
+          },
+          "hirei": {
+            "totalVotes": 113517,
+            "results": [
+              {"party": "自由民主党", "votes": 28639, "rate": 25.23},
+              {"party": "立憲民主党", "votes": 22022, "rate": 19.40},
+              {"party": "国民民主党", "votes": 18254, "rate": 16.08},
+              {"party": "日本維新の会", "votes": 10593, "rate": 9.33},
+              {"party": "日本共産党", "votes": 8307, "rate": 7.32},
+              {"party": "公明党", "votes": 7910, "rate": 6.97},
+              {"party": "れいわ新選組", "votes": 7338, "rate": 6.46},
+              {"party": "参政党", "votes": 4520, "rate": 3.98},
+              {"party": "日本保守党", "votes": 3751, "rate": 3.30},
+              {"party": "社会民主党", "votes": 1788, "rate": 1.58},
+              {"party": "みんなでつくる党", "votes": 395, "rate": 0.35}
+            ]
+          },
+          "districts": [
+            {"id": 1, "dayOfEligibleVoters": 8526, "dayOfVoters": 2613, "dayOfTurnoutRate": 30.65, "earlyVoters": 2612, "absenteeVoters": 0, "totalVoters": 5225, "totalTurnoutRate": 61.28},
+            {"id": 2, "dayOfEligibleVoters": 3434, "dayOfVoters": 960, "dayOfTurnoutRate": 27.96, "earlyVoters": 960, "absenteeVoters": 0, "totalVoters": 1920, "totalTurnoutRate": 55.91},
+            {"id": 3, "dayOfEligibleVoters": 6913, "dayOfVoters": 2072, "dayOfTurnoutRate": 29.97, "earlyVoters": 2071, "absenteeVoters": 0, "totalVoters": 4143, "totalTurnoutRate": 59.93},
+            {"id": 4, "dayOfEligibleVoters": 8903, "dayOfVoters": 2720, "dayOfTurnoutRate": 30.55, "earlyVoters": 2719, "absenteeVoters": 0, "totalVoters": 5439, "totalTurnoutRate": 61.09},
+            {"id": 5, "dayOfEligibleVoters": 9723, "dayOfVoters": 2811, "dayOfTurnoutRate": 28.91, "earlyVoters": 2811, "absenteeVoters": 0, "totalVoters": 5622, "totalTurnoutRate": 57.82},
+            {"id": 6, "dayOfEligibleVoters": 8798, "dayOfVoters": 2730, "dayOfTurnoutRate": 31.03, "earlyVoters": 2729, "absenteeVoters": 0, "totalVoters": 5459, "totalTurnoutRate": 62.05},
+            {"id": 7, "dayOfEligibleVoters": 10685, "dayOfVoters": 3034, "dayOfTurnoutRate": 28.39, "earlyVoters": 3033, "absenteeVoters": 0, "totalVoters": 6067, "totalTurnoutRate": 56.78},
+            {"id": 8, "dayOfEligibleVoters": 8986, "dayOfVoters": 2555, "dayOfTurnoutRate": 28.43, "earlyVoters": 2554, "absenteeVoters": 0, "totalVoters": 5109, "totalTurnoutRate": 56.86},
+            {"id": 9, "dayOfEligibleVoters": 12432, "dayOfVoters": 3859, "dayOfTurnoutRate": 31.04, "earlyVoters": 3859, "absenteeVoters": 0, "totalVoters": 7718, "totalTurnoutRate": 62.08},
+            {"id": 10, "dayOfEligibleVoters": 11050, "dayOfVoters": 3338, "dayOfTurnoutRate": 30.21, "earlyVoters": 3338, "absenteeVoters": 0, "totalVoters": 6676, "totalTurnoutRate": 60.42},
+            {"id": 11, "dayOfEligibleVoters": 9043, "dayOfVoters": 2673, "dayOfTurnoutRate": 29.56, "earlyVoters": 2672, "absenteeVoters": 0, "totalVoters": 5345, "totalTurnoutRate": 59.11},
+            {"id": 12, "dayOfEligibleVoters": 8076, "dayOfVoters": 2393, "dayOfTurnoutRate": 29.63, "earlyVoters": 2393, "absenteeVoters": 0, "totalVoters": 4786, "totalTurnoutRate": 59.26},
+            {"id": 13, "dayOfEligibleVoters": 7818, "dayOfVoters": 2374, "dayOfTurnoutRate": 30.37, "earlyVoters": 2374, "absenteeVoters": 0, "totalVoters": 4748, "totalTurnoutRate": 60.73},
+            {"id": 14, "dayOfEligibleVoters": 9759, "dayOfVoters": 2998, "dayOfTurnoutRate": 30.72, "earlyVoters": 2998, "absenteeVoters": 0, "totalVoters": 5996, "totalTurnoutRate": 61.44},
+            {"id": 15, "dayOfEligibleVoters": 11976, "dayOfVoters": 3657, "dayOfTurnoutRate": 30.54, "earlyVoters": 3656, "absenteeVoters": 0, "totalVoters": 7313, "totalTurnoutRate": 61.06},
+            {"id": 16, "dayOfEligibleVoters": 9589, "dayOfVoters": 2997, "dayOfTurnoutRate": 31.26, "earlyVoters": 2997, "absenteeVoters": 0, "totalVoters": 5994, "totalTurnoutRate": 62.51},
+            {"id": 17, "dayOfEligibleVoters": 8898, "dayOfVoters": 2674, "dayOfTurnoutRate": 30.05, "earlyVoters": 2674, "absenteeVoters": 0, "totalVoters": 5348, "totalTurnoutRate": 60.10},
+            {"id": 18, "dayOfEligibleVoters": 6864, "dayOfVoters": 2046, "dayOfTurnoutRate": 29.81, "earlyVoters": 2046, "absenteeVoters": 0, "totalVoters": 4092, "totalTurnoutRate": 59.62},
+            {"id": 67, "dayOfEligibleVoters": 9182, "dayOfVoters": 2572, "dayOfTurnoutRate": 28.01, "earlyVoters": 2571, "absenteeVoters": 0, "totalVoters": 5143, "totalTurnoutRate": 56.01},
+            {"id": 68, "dayOfEligibleVoters": 8269, "dayOfVoters": 2234, "dayOfTurnoutRate": 27.02, "earlyVoters": 2234, "absenteeVoters": 0, "totalVoters": 4468, "totalTurnoutRate": 54.03},
+            {"id": 69, "dayOfEligibleVoters": 7804, "dayOfVoters": 2360, "dayOfTurnoutRate": 30.24, "earlyVoters": 2359, "absenteeVoters": 0, "totalVoters": 4719, "totalTurnoutRate": 60.47},
+            {"id": 70, "dayOfEligibleVoters": 7408, "dayOfVoters": 2382, "dayOfTurnoutRate": 32.16, "earlyVoters": 2382, "absenteeVoters": 0, "totalVoters": 4764, "totalTurnoutRate": 64.31}
+          ]
+        },
+        "2026": {
+          "year": 2026,
+          "electionDate": "2026-02-08",
+          "syosenkyoku": {
+            "totalVotes": 123627,
+            "results": [
+              {"party": "自由民主党", "votes": 40042, "rate": 32.39},
+              {"party": "チームみらい", "votes": 34706, "rate": 28.07},
+              {"party": "中道改革連合", "votes": 19663, "rate": 15.90},
+              {"party": "国民民主党", "votes": 10461, "rate": 8.46},
+              {"party": "本人届出", "votes": 12922, "rate": 10.45},
+              {"party": "参政党", "votes": 5833, "rate": 4.72}
+            ]
+          },
+          "hirei": {
+            "totalVotes": 124295,
+            "results": [
+              {"party": "自由民主党", "votes": 42416, "rate": 34.13},
+              {"party": "チームみらい", "votes": 19681, "rate": 15.83},
+              {"party": "中道改革連合", "votes": 17495, "rate": 14.08},
+              {"party": "国民民主党", "votes": 13981, "rate": 11.25},
+              {"party": "日本維新の会", "votes": 7776, "rate": 6.26},
+              {"party": "参政党", "votes": 7040, "rate": 5.66},
+              {"party": "日本共産党", "votes": 6719, "rate": 5.41},
+              {"party": "日本保守党", "votes": 3504, "rate": 2.82},
+              {"party": "れいわ新選組", "votes": 2768, "rate": 2.23},
+              {"party": "減税日本・ゆうこく連合", "votes": 1487, "rate": 1.20},
+              {"party": "社会民主党", "votes": 1428, "rate": 1.15}
+            ]
+          },
+          "districts": [
+            {"id": 1, "dayOfEligibleVoters": 8526, "dayOfVoters": 3135, "dayOfTurnoutRate": 36.77, "earlyVoters": 2612, "absenteeVoters": 0, "totalVoters": 5747, "totalTurnoutRate": 67.41},
+            {"id": 2, "dayOfEligibleVoters": 3434, "dayOfVoters": 1152, "dayOfTurnoutRate": 33.55, "earlyVoters": 960, "absenteeVoters": 0, "totalVoters": 2112, "totalTurnoutRate": 61.50},
+            {"id": 3, "dayOfEligibleVoters": 6913, "dayOfVoters": 2486, "dayOfTurnoutRate": 35.96, "earlyVoters": 2071, "absenteeVoters": 0, "totalVoters": 4557, "totalTurnoutRate": 65.92},
+            {"id": 4, "dayOfEligibleVoters": 8903, "dayOfVoters": 3264, "dayOfTurnoutRate": 36.66, "earlyVoters": 2719, "absenteeVoters": 0, "totalVoters": 5983, "totalTurnoutRate": 67.20},
+            {"id": 5, "dayOfEligibleVoters": 9723, "dayOfVoters": 3373, "dayOfTurnoutRate": 34.69, "earlyVoters": 2811, "absenteeVoters": 0, "totalVoters": 6184, "totalTurnoutRate": 63.60},
+            {"id": 6, "dayOfEligibleVoters": 8798, "dayOfVoters": 3275, "dayOfTurnoutRate": 37.22, "earlyVoters": 2729, "absenteeVoters": 0, "totalVoters": 6004, "totalTurnoutRate": 68.24},
+            {"id": 7, "dayOfEligibleVoters": 10685, "dayOfVoters": 3640, "dayOfTurnoutRate": 34.07, "earlyVoters": 3033, "absenteeVoters": 0, "totalVoters": 6673, "totalTurnoutRate": 62.45},
+            {"id": 8, "dayOfEligibleVoters": 8986, "dayOfVoters": 3065, "dayOfTurnoutRate": 34.11, "earlyVoters": 2554, "absenteeVoters": 0, "totalVoters": 5619, "totalTurnoutRate": 62.53},
+            {"id": 9, "dayOfEligibleVoters": 12432, "dayOfVoters": 4630, "dayOfTurnoutRate": 37.24, "earlyVoters": 3859, "absenteeVoters": 0, "totalVoters": 8489, "totalTurnoutRate": 68.28},
+            {"id": 10, "dayOfEligibleVoters": 11050, "dayOfVoters": 4005, "dayOfTurnoutRate": 36.24, "earlyVoters": 3338, "absenteeVoters": 0, "totalVoters": 7343, "totalTurnoutRate": 66.45},
+            {"id": 11, "dayOfEligibleVoters": 9043, "dayOfVoters": 3207, "dayOfTurnoutRate": 35.46, "earlyVoters": 2672, "absenteeVoters": 0, "totalVoters": 5879, "totalTurnoutRate": 65.01},
+            {"id": 12, "dayOfEligibleVoters": 8076, "dayOfVoters": 2871, "dayOfTurnoutRate": 35.55, "earlyVoters": 2393, "absenteeVoters": 0, "totalVoters": 5264, "totalTurnoutRate": 65.18},
+            {"id": 13, "dayOfEligibleVoters": 7818, "dayOfVoters": 2848, "dayOfTurnoutRate": 36.43, "earlyVoters": 2374, "absenteeVoters": 0, "totalVoters": 5222, "totalTurnoutRate": 66.79},
+            {"id": 14, "dayOfEligibleVoters": 9759, "dayOfVoters": 3597, "dayOfTurnoutRate": 36.86, "earlyVoters": 2998, "absenteeVoters": 0, "totalVoters": 6595, "totalTurnoutRate": 67.58},
+            {"id": 15, "dayOfEligibleVoters": 11976, "dayOfVoters": 4388, "dayOfTurnoutRate": 36.64, "earlyVoters": 3656, "absenteeVoters": 0, "totalVoters": 8044, "totalTurnoutRate": 67.17},
+            {"id": 16, "dayOfEligibleVoters": 9589, "dayOfVoters": 3596, "dayOfTurnoutRate": 37.50, "earlyVoters": 2997, "absenteeVoters": 0, "totalVoters": 6593, "totalTurnoutRate": 68.76},
+            {"id": 17, "dayOfEligibleVoters": 8898, "dayOfVoters": 3208, "dayOfTurnoutRate": 36.05, "earlyVoters": 2674, "absenteeVoters": 0, "totalVoters": 5882, "totalTurnoutRate": 66.10},
+            {"id": 18, "dayOfEligibleVoters": 6864, "dayOfVoters": 2455, "dayOfTurnoutRate": 35.77, "earlyVoters": 2046, "absenteeVoters": 0, "totalVoters": 4501, "totalTurnoutRate": 65.58},
+            {"id": 67, "dayOfEligibleVoters": 9182, "dayOfVoters": 3086, "dayOfTurnoutRate": 33.61, "earlyVoters": 2571, "absenteeVoters": 0, "totalVoters": 5657, "totalTurnoutRate": 61.61},
+            {"id": 68, "dayOfEligibleVoters": 8269, "dayOfVoters": 2680, "dayOfTurnoutRate": 32.41, "earlyVoters": 2234, "absenteeVoters": 0, "totalVoters": 4914, "totalTurnoutRate": 59.43},
+            {"id": 69, "dayOfEligibleVoters": 7804, "dayOfVoters": 2831, "dayOfTurnoutRate": 36.27, "earlyVoters": 2359, "absenteeVoters": 0, "totalVoters": 5190, "totalTurnoutRate": 66.51},
+            {"id": 70, "dayOfEligibleVoters": 7408, "dayOfVoters": 2858, "dayOfTurnoutRate": 38.58, "earlyVoters": 2382, "absenteeVoters": 0, "totalVoters": 5240, "totalTurnoutRate": 70.73}
+          ]
+        }
+      }
+    }
+  }
+}

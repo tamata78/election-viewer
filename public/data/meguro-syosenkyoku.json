@@ -1,0 +1,52 @@
+{
+  "electionType": "小選挙区",
+  "region": "目黒区",
+  "electionDate": "2026-02-08",
+  "totalVoters": 144984,
+  "totalVotes": 142569,
+  "invalidVotes": 2413,
+  "candidates": [
+    {
+      "number": 1,
+      "party": "日本共産党",
+      "candidate": "松井 かな子",
+      "votes": 11151,
+      "voteShare": 7.82
+    },
+    {
+      "number": 2,
+      "party": "国民民主党",
+      "candidate": "坂元 ゆうき",
+      "votes": 13846,
+      "voteShare": 9.71
+    },
+    {
+      "number": 3,
+      "party": "無所属",
+      "candidate": "まつばら 仁",
+      "votes": 37702,
+      "voteShare": 26.44
+    },
+    {
+      "number": 4,
+      "party": "チームみらい",
+      "candidate": "うさみ 登",
+      "votes": 20344,
+      "voteShare": 14.27
+    },
+    {
+      "number": 5,
+      "party": "自由民主党",
+      "candidate": "今岡 うえき",
+      "votes": 52287,
+      "voteShare": 36.67
+    },
+    {
+      "number": 6,
+      "party": "参政党",
+      "candidate": "すがぬま けい子",
+      "votes": 7239,
+      "voteShare": 5.08
+    }
+  ]
+}
