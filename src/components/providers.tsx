@@ -1,27 +1,27 @@
 'use client';
 
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
 
 interface AppState {
-  selectedParties: string[];
-  selectedYear: number;
-  setSelectedParties: (parties: string[]) => void;
-  setSelectedYear: (year: number) => void;
+  sidebarOpen: boolean;
+  openSidebar: () => void;
+  closeSidebar: () => void;
 }
 
 const AppContext = createContext<AppState | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [selectedParties, setSelectedParties] = useState<string[]>([]);
-  const [selectedYear, setSelectedYear] = useState(2026);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSidebar = useCallback(() => setSidebarOpen(true), []);
+  const closeSidebar = useCallback(() => setSidebarOpen(false), []);
 
   return (
     <AppContext.Provider
       value={{
-        selectedParties,
-        selectedYear,
-        setSelectedParties,
-        setSelectedYear,
+        sidebarOpen,
+        openSidebar,
+        closeSidebar,
       }}
     >
       {children}

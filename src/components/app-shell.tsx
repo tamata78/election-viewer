@@ -5,22 +5,21 @@ import { Sidebar } from '@/components/layout/sidebar';
 import { AppProvider, useAppState } from '@/components/providers';
 
 function AppShellInner({ children }: { children: ReactNode }) {
-  const {
-    selectedParties,
-    setSelectedParties,
-    selectedYear,
-    setSelectedYear,
-  } = useAppState();
+  const { sidebarOpen, closeSidebar } = useAppState();
 
   return (
     <div className="flex min-h-screen">
-      <Sidebar
-        selectedParties={selectedParties}
-        onPartyChange={setSelectedParties}
-        selectedYear={selectedYear}
-        onYearChange={setSelectedYear}
-      />
-      <main className="flex-1 bg-background">{children}</main>
+      {/* Mobile overlay */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          onClick={closeSidebar}
+        />
+      )}
+      <Sidebar open={sidebarOpen} onClose={closeSidebar} />
+      <main className="flex-1 min-w-0 bg-background">
+        {children}
+      </main>
     </div>
   );
 }

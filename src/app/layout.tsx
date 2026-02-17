@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '2026年衆議院選挙 分析ダッシュボード',
+  title: '2026年衆議院選挙 選挙分析ツール',
   description: '東京都の選挙結果を可視化・分析するWebアプリケーション',
 };
 

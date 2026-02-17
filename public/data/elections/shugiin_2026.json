@@ -1,0 +1,3000 @@
+{
+  "year": 2026,
+  "electionDate": "2026-02-08",
+  "hirei": {
+    "totalSeats": 176,
+    "blocks": [
+      {
+        "name": "北海道",
+        "totalSeats": 8,
+        "totalVotes": 2463323,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "北海道",
+            "seats": 4,
+            "votes": 911742,
+            "voteRate": 37.01,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "北海道",
+            "seats": 3,
+            "votes": 605889,
+            "voteRate": 24.6,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "北海道",
+            "seats": 1,
+            "votes": 218850,
+            "voteRate": 8.88,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 163329,
+            "voteRate": 6.63,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 134613,
+            "voteRate": 5.46,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 134084,
+            "voteRate": 5.44,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 93966,
+            "voteRate": 3.81,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 76099,
+            "voteRate": 3.09,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 60119,
+            "voteRate": 2.44,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 32878,
+            "voteRate": 1.33,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "北海道",
+            "seats": 0,
+            "votes": 31754,
+            "voteRate": 1.29,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "東北",
+        "totalSeats": 12,
+        "totalVotes": 3917511,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "東北",
+            "seats": 6,
+            "votes": 1612576,
+            "voteRate": 41.16,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "東北",
+            "seats": 3,
+            "votes": 828883,
+            "voteRate": 21.16,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "東北",
+            "seats": 1,
+            "votes": 389503,
+            "voteRate": 9.94,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "東北",
+            "seats": 1,
+            "votes": 278410,
+            "voteRate": 7.11,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "東北",
+            "seats": 1,
+            "votes": 234050,
+            "voteRate": 5.97,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "東北",
+            "seats": 0,
+            "votes": 165104,
+            "voteRate": 4.21,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "東北",
+            "seats": 0,
+            "votes": 158466,
+            "voteRate": 4.05,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "東北",
+            "seats": 0,
+            "votes": 121631,
+            "voteRate": 3.1,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "東北",
+            "seats": 0,
+            "votes": 72889,
+            "voteRate": 1.86,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "東北",
+            "seats": 0,
+            "votes": 55999,
+            "voteRate": 1.43,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "北関東",
+        "totalSeats": 19,
+        "totalVotes": 6096091,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "北関東",
+            "seats": 8,
+            "votes": 2256845,
+            "voteRate": 37.02,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "北関東",
+            "seats": 4,
+            "votes": 1174717,
+            "voteRate": 19.27,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "北関東",
+            "seats": 2,
+            "votes": 626695,
+            "voteRate": 10.28,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "北関東",
+            "seats": 2,
+            "votes": 506071,
+            "voteRate": 8.3,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "北関東",
+            "seats": 1,
+            "votes": 467561,
+            "voteRate": 7.67,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "北関東",
+            "seats": 1,
+            "votes": 326128,
+            "voteRate": 5.35,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "北関東",
+            "seats": 1,
+            "votes": 254497,
+            "voteRate": 4.17,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "北関東",
+            "seats": 0,
+            "votes": 182261,
+            "voteRate": 2.99,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "北関東",
+            "seats": 0,
+            "votes": 150809,
+            "voteRate": 2.47,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "北関東",
+            "seats": 0,
+            "votes": 77406,
+            "voteRate": 1.27,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "北関東",
+            "seats": 0,
+            "votes": 73101,
+            "voteRate": 1.2,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "南関東",
+        "totalSeats": 23,
+        "totalVotes": 7417463,
+        "parties": [
+          {
+            "party": "中道改革連合",
+            "block": "南関東",
+            "seats": 7,
+            "votes": 1424763,
+            "voteRate": 19.21,
+            "candidates": []
+          },
+          {
+            "party": "自由民主党",
+            "block": "南関東",
+            "seats": 4,
+            "votes": 2637938,
+            "voteRate": 35.56,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "南関東",
+            "seats": 3,
+            "votes": 788564,
+            "voteRate": 10.63,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "南関東",
+            "seats": 3,
+            "votes": 682469,
+            "voteRate": 9.2,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "南関東",
+            "seats": 2,
+            "votes": 531288,
+            "voteRate": 7.16,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "南関東",
+            "seats": 2,
+            "votes": 463287,
+            "voteRate": 6.25,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "南関東",
+            "seats": 1,
+            "votes": 314224,
+            "voteRate": 4.24,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "南関東",
+            "seats": 1,
+            "votes": 202655,
+            "voteRate": 2.73,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "南関東",
+            "seats": 0,
+            "votes": 184802,
+            "voteRate": 2.49,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "南関東",
+            "seats": 0,
+            "votes": 95646,
+            "voteRate": 1.29,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "南関東",
+            "seats": 0,
+            "votes": 91827,
+            "voteRate": 1.24,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "東京都",
+        "totalSeats": 19,
+        "totalVotes": 6778416,
+        "parties": [
+          {
+            "party": "中道改革連合",
+            "block": "東京都",
+            "seats": 5,
+            "votes": 1119155,
+            "voteRate": 16.51,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "東京都",
+            "seats": 4,
+            "votes": 887849,
+            "voteRate": 13.1,
+            "candidates": []
+          },
+          {
+            "party": "自由民主党",
+            "block": "東京都",
+            "seats": 3,
+            "votes": 2243625,
+            "voteRate": 33.1,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "東京都",
+            "seats": 3,
+            "votes": 746660,
+            "voteRate": 11.02,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "東京都",
+            "seats": 2,
+            "votes": 427028,
+            "voteRate": 6.3,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "東京都",
+            "seats": 1,
+            "votes": 407146,
+            "voteRate": 6.01,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "東京都",
+            "seats": 1,
+            "votes": 384487,
+            "voteRate": 5.67,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "東京都",
+            "seats": 0,
+            "votes": 209329,
+            "voteRate": 3.09,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "東京都",
+            "seats": 0,
+            "votes": 179614,
+            "voteRate": 2.65,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "東京都",
+            "seats": 0,
+            "votes": 89161,
+            "voteRate": 1.32,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "東京都",
+            "seats": 0,
+            "votes": 84362,
+            "voteRate": 1.24,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "北陸信越",
+        "totalSeats": 10,
+        "totalVotes": 3296868,
+        "parties": [
+          {
+            "party": "中道改革連合",
+            "block": "北陸信越",
+            "seats": 4,
+            "votes": 651331,
+            "voteRate": 19.76,
+            "candidates": []
+          },
+          {
+            "party": "自由民主党",
+            "block": "北陸信越",
+            "seats": 3,
+            "votes": 1387716,
+            "voteRate": 42.09,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "北陸信越",
+            "seats": 1,
+            "votes": 322739,
+            "voteRate": 9.79,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "北陸信越",
+            "seats": 1,
+            "votes": 285897,
+            "voteRate": 8.67,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "北陸信越",
+            "seats": 1,
+            "votes": 231686,
+            "voteRate": 7.03,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "北陸信越",
+            "seats": 0,
+            "votes": 140311,
+            "voteRate": 4.26,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "北陸信越",
+            "seats": 0,
+            "votes": 100497,
+            "voteRate": 3.05,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "北陸信越",
+            "seats": 0,
+            "votes": 73566,
+            "voteRate": 2.23,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "北陸信越",
+            "seats": 0,
+            "votes": 50017,
+            "voteRate": 1.52,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "北陸信越",
+            "seats": 0,
+            "votes": 40094,
+            "voteRate": 1.22,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "東海",
+        "totalSeats": 21,
+        "totalVotes": 6979356,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "東海",
+            "seats": 10,
+            "votes": 2628008,
+            "voteRate": 37.65,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "東海",
+            "seats": 4,
+            "votes": 1199580,
+            "voteRate": 17.19,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "東海",
+            "seats": 3,
+            "votes": 836102,
+            "voteRate": 11.98,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "東海",
+            "seats": 2,
+            "votes": 527291,
+            "voteRate": 7.56,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "東海",
+            "seats": 1,
+            "votes": 478316,
+            "voteRate": 6.85,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "東海",
+            "seats": 1,
+            "votes": 400964,
+            "voteRate": 5.74,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "東海",
+            "seats": 0,
+            "votes": 241848,
+            "voteRate": 3.47,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "東海",
+            "seats": 0,
+            "votes": 218838,
+            "voteRate": 3.14,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "東海",
+            "seats": 0,
+            "votes": 209174,
+            "voteRate": 3.0,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "東海",
+            "seats": 0,
+            "votes": 175506,
+            "voteRate": 2.51,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "東海",
+            "seats": 0,
+            "votes": 63729,
+            "voteRate": 0.91,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "近畿",
+        "totalSeats": 28,
+        "totalVotes": 9347675,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "近畿",
+            "seats": 10,
+            "votes": 2842876,
+            "voteRate": 30.41,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "近畿",
+            "seats": 8,
+            "votes": 2168635,
+            "voteRate": 23.2,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "近畿",
+            "seats": 5,
+            "votes": 1332752,
+            "voteRate": 14.26,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "近畿",
+            "seats": 2,
+            "votes": 651785,
+            "voteRate": 6.97,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "近畿",
+            "seats": 2,
+            "votes": 631179,
+            "voteRate": 6.75,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "近畿",
+            "seats": 1,
+            "votes": 480188,
+            "voteRate": 5.14,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "近畿",
+            "seats": 0,
+            "votes": 553496,
+            "voteRate": 5.92,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "近畿",
+            "seats": 0,
+            "votes": 259055,
+            "voteRate": 2.77,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "近畿",
+            "seats": 0,
+            "votes": 247048,
+            "voteRate": 2.64,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "近畿",
+            "seats": 0,
+            "votes": 105647,
+            "voteRate": 1.13,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "近畿",
+            "seats": 0,
+            "votes": 75014,
+            "voteRate": 0.8,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "中国",
+        "totalSeats": 10,
+        "totalVotes": 3004801,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "中国",
+            "seats": 5,
+            "votes": 1297078,
+            "voteRate": 43.17,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "中国",
+            "seats": 2,
+            "votes": 620211,
+            "voteRate": 20.64,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "中国",
+            "seats": 1,
+            "votes": 273263,
+            "voteRate": 9.09,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "中国",
+            "seats": 1,
+            "votes": 252036,
+            "voteRate": 8.39,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "中国",
+            "seats": 1,
+            "votes": 213428,
+            "voteRate": 7.1,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "中国",
+            "seats": 0,
+            "votes": 109968,
+            "voteRate": 3.66,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "中国",
+            "seats": 0,
+            "votes": 87272,
+            "voteRate": 2.9,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "中国",
+            "seats": 0,
+            "votes": 73431,
+            "voteRate": 2.44,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "中国",
+            "seats": 0,
+            "votes": 40460,
+            "voteRate": 1.35,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "中国",
+            "seats": 0,
+            "votes": 37654,
+            "voteRate": 1.25,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "四国",
+        "totalSeats": 6,
+        "totalVotes": 1644793,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "四国",
+            "seats": 4,
+            "votes": 691402,
+            "voteRate": 42.04,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "四国",
+            "seats": 1,
+            "votes": 299777,
+            "voteRate": 18.23,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "四国",
+            "seats": 1,
+            "votes": 213661,
+            "voteRate": 12.99,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "四国",
+            "seats": 0,
+            "votes": 138187,
+            "voteRate": 8.4,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "四国",
+            "seats": 0,
+            "votes": 121217,
+            "voteRate": 7.37,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "四国",
+            "seats": 0,
+            "votes": 68324,
+            "voteRate": 4.15,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "四国",
+            "seats": 0,
+            "votes": 49267,
+            "voteRate": 3.0,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "四国",
+            "seats": 0,
+            "votes": 44284,
+            "voteRate": 2.69,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "四国",
+            "seats": 0,
+            "votes": 18674,
+            "voteRate": 1.14,
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "name": "九州",
+        "totalSeats": 20,
+        "totalVotes": 57259957,
+        "parties": [
+          {
+            "party": "自由民主党",
+            "block": "九州",
+            "seats": 10,
+            "votes": 2516334,
+            "voteRate": 4.39,
+            "candidates": []
+          },
+          {
+            "party": "中道改革連合",
+            "block": "九州",
+            "seats": 4,
+            "votes": 1181744,
+            "voteRate": 2.06,
+            "candidates": []
+          },
+          {
+            "party": "参政党",
+            "block": "九州",
+            "seats": 2,
+            "votes": 519904,
+            "voteRate": 0.91,
+            "candidates": []
+          },
+          {
+            "party": "国民民主党",
+            "block": "九州",
+            "seats": 2,
+            "votes": 505129,
+            "voteRate": 0.88,
+            "candidates": []
+          },
+          {
+            "party": "チームみらい",
+            "block": "九州",
+            "seats": 1,
+            "votes": 375396,
+            "voteRate": 0.66,
+            "candidates": []
+          },
+          {
+            "party": "日本維新の会",
+            "block": "九州",
+            "seats": 1,
+            "votes": 374428,
+            "voteRate": 0.65,
+            "candidates": []
+          },
+          {
+            "party": "日本共産党",
+            "block": "九州",
+            "seats": 0,
+            "votes": 210755,
+            "voteRate": 0.37,
+            "candidates": []
+          },
+          {
+            "party": "れいわ新選組",
+            "block": "九州",
+            "seats": 0,
+            "votes": 207318,
+            "voteRate": 0.36,
+            "candidates": []
+          },
+          {
+            "party": "日本保守党",
+            "block": "九州",
+            "seats": 0,
+            "votes": 151773,
+            "voteRate": 0.27,
+            "candidates": []
+          },
+          {
+            "party": "社会民主党",
+            "block": "九州",
+            "seats": 0,
+            "votes": 142166,
+            "voteRate": 0.25,
+            "candidates": []
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "block": "九州",
+            "seats": 0,
+            "votes": 128713,
+            "voteRate": 0.22,
+            "candidates": []
+          }
+        ]
+      }
+    ]
+  },
+  "shou": {
+    "totalSeats": 289,
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "totalDistricts": 12,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 11,
+            "totalVotes": 1238262,
+            "voteRate": 50.63
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 1,
+            "totalVotes": 932617,
+            "voteRate": 38.13
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 140017,
+            "voteRate": 5.72
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 87141,
+            "voteRate": 3.56
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 29134,
+            "voteRate": 1.19
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 18625,
+            "voteRate": 0.76
+          }
+        ]
+      },
+      {
+        "prefecture": "青森県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 260215,
+            "voteRate": 52.79
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 164849,
+            "voteRate": 33.45
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 30016,
+            "voteRate": 6.09
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 15048,
+            "voteRate": 3.05
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 14181,
+            "voteRate": 2.88
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 8570,
+            "voteRate": 1.74
+          }
+        ]
+      },
+      {
+        "prefecture": "岩手県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 294100,
+            "voteRate": 51.78
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 1,
+            "totalVotes": 151940,
+            "voteRate": 26.75
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 67294,
+            "voteRate": 11.85
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 42064,
+            "voteRate": 7.41
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 10448,
+            "voteRate": 1.84
+          }
+        ]
+      },
+      {
+        "prefecture": "宮城県",
+        "totalDistricts": 5,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 5,
+            "totalVotes": 557598,
+            "voteRate": 53.7
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 308466,
+            "voteRate": 29.71
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 99684,
+            "voteRate": 9.6
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 25640,
+            "voteRate": 2.47
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 23237,
+            "voteRate": 2.24
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 19245,
+            "voteRate": 1.85
+          }
+        ]
+      },
+      {
+        "prefecture": "秋田県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 221355,
+            "voteRate": 50.02
+          },
+          {
+            "party": "国民民主党",
+            "seats": 1,
+            "totalVotes": 113083,
+            "voteRate": 25.56
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 80331,
+            "voteRate": 18.15
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 14843,
+            "voteRate": 3.35
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 7645,
+            "voteRate": 1.73
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 5246,
+            "voteRate": 1.19
+          }
+        ]
+      },
+      {
+        "prefecture": "山形県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 321305,
+            "voteRate": 62.84
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 80875,
+            "voteRate": 15.82
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 71776,
+            "voteRate": 14.04
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 29462,
+            "voteRate": 5.76
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 7919,
+            "voteRate": 1.55
+          }
+        ]
+      },
+      {
+        "prefecture": "福島県",
+        "totalDistricts": 4,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 4,
+            "totalVotes": 436923,
+            "voteRate": 50.75
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 315300,
+            "voteRate": 36.62
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 38539,
+            "voteRate": 4.48
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 20645,
+            "voteRate": 2.4
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 16649,
+            "voteRate": 1.93
+          }
+        ]
+      },
+      {
+        "prefecture": "茨城県",
+        "totalDistricts": 7,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 5,
+            "totalVotes": 601807,
+            "voteRate": 49.99
+          },
+          {
+            "party": "国民民主党",
+            "seats": 1,
+            "totalVotes": 86888,
+            "voteRate": 7.22
+          },
+          {
+            "party": "無所属",
+            "seats": 1,
+            "totalVotes": 0,
+            "voteRate": 0.0
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 96782,
+            "voteRate": 8.04
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 86625,
+            "voteRate": 7.2
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 44354,
+            "voteRate": 3.68
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 10008,
+            "voteRate": 0.83
+          }
+        ]
+      },
+      {
+        "prefecture": "栃木県",
+        "totalDistricts": 5,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 4,
+            "totalVotes": 404341,
+            "voteRate": 49.26
+          },
+          {
+            "party": "無所属",
+            "seats": 1,
+            "totalVotes": 0,
+            "voteRate": 0.0
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 185448,
+            "voteRate": 22.59
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 83645,
+            "voteRate": 10.19
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 41233,
+            "voteRate": 5.02
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 21767,
+            "voteRate": 2.65
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 19626,
+            "voteRate": 2.39
+          }
+        ]
+      },
+      {
+        "prefecture": "群馬県",
+        "totalDistricts": 5,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 5,
+            "totalVotes": 476060,
+            "voteRate": 59.56
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 137155,
+            "voteRate": 17.16
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 101134,
+            "voteRate": 12.65
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 35772,
+            "voteRate": 4.48
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 22227,
+            "voteRate": 2.78
+          }
+        ]
+      },
+      {
+        "prefecture": "埼玉県",
+        "totalDistricts": 16,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 16,
+            "totalVotes": 1589757,
+            "voteRate": 50.42
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 853030,
+            "voteRate": 27.05
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 261127,
+            "voteRate": 8.28
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 185301,
+            "voteRate": 5.88
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 95834,
+            "voteRate": 3.04
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 89211,
+            "voteRate": 2.83
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 16713,
+            "voteRate": 0.53
+          }
+        ]
+      },
+      {
+        "prefecture": "千葉県",
+        "totalDistricts": 14,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 13,
+            "totalVotes": 1406181,
+            "voteRate": 51.3
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 1,
+            "totalVotes": 760557,
+            "voteRate": 27.74
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 223990,
+            "voteRate": 8.17
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 134914,
+            "voteRate": 4.92
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 96909,
+            "voteRate": 3.54
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 37021,
+            "voteRate": 1.35
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "seats": 0,
+            "totalVotes": 22037,
+            "voteRate": 0.8
+          }
+        ]
+      },
+      {
+        "prefecture": "東京都",
+        "totalDistricts": 30,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 30,
+            "totalVotes": 2850532,
+            "voteRate": 42.77
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 1475054,
+            "voteRate": 22.13
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 950908,
+            "voteRate": 14.27
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 580777,
+            "voteRate": 8.71
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 261080,
+            "voteRate": 3.92
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 251136,
+            "voteRate": 3.77
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 32066,
+            "voteRate": 0.48
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "seats": 0,
+            "totalVotes": 13450,
+            "voteRate": 0.2
+          }
+        ]
+      },
+      {
+        "prefecture": "神奈川県",
+        "totalDistricts": 20,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 20,
+            "totalVotes": 2126352,
+            "voteRate": 51.23
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 1133254,
+            "voteRate": 27.3
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 294843,
+            "voteRate": 7.1
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 219107,
+            "voteRate": 5.28
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 180365,
+            "voteRate": 4.35
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 130540,
+            "voteRate": 3.14
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 20598,
+            "voteRate": 0.5
+          }
+        ]
+      },
+      {
+        "prefecture": "新潟県",
+        "totalDistricts": 5,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 5,
+            "totalVotes": 531706,
+            "voteRate": 51.2
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 376961,
+            "voteRate": 36.3
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 88110,
+            "voteRate": 8.48
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 19333,
+            "voteRate": 1.86
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 15842,
+            "voteRate": 1.53
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 6574,
+            "voteRate": 0.63
+          }
+        ]
+      },
+      {
+        "prefecture": "富山県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 297695,
+            "voteRate": 67.55
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 57834,
+            "voteRate": 13.12
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 35576,
+            "voteRate": 8.07
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 31264,
+            "voteRate": 7.09
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 18322,
+            "voteRate": 4.16
+          }
+        ]
+      },
+      {
+        "prefecture": "石川県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 296574,
+            "voteRate": 60.01
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 64893,
+            "voteRate": 13.13
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 48150,
+            "voteRate": 9.74
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 41684,
+            "voteRate": 8.43
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 23350,
+            "voteRate": 4.72
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 19547,
+            "voteRate": 3.96
+          }
+        ]
+      },
+      {
+        "prefecture": "福井県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 1,
+            "totalVotes": 93292,
+            "voteRate": 28.68
+          },
+          {
+            "party": "無所属",
+            "seats": 1,
+            "totalVotes": 0,
+            "voteRate": 0.0
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 91536,
+            "voteRate": 28.14
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 34541,
+            "voteRate": 10.62
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 27189,
+            "voteRate": 8.36
+          }
+        ]
+      },
+      {
+        "prefecture": "山梨県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 236645,
+            "voteRate": 62.62
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 87812,
+            "voteRate": 23.24
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 34549,
+            "voteRate": 9.14
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 18908,
+            "voteRate": 5.0
+          }
+        ]
+      },
+      {
+        "prefecture": "長野県",
+        "totalDistricts": 5,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 5,
+            "totalVotes": 511053,
+            "voteRate": 51.7
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 310782,
+            "voteRate": 31.44
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 53780,
+            "voteRate": 5.44
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 44790,
+            "voteRate": 4.53
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 34122,
+            "voteRate": 3.45
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 22747,
+            "voteRate": 2.3
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 11296,
+            "voteRate": 1.14
+          }
+        ]
+      },
+      {
+        "prefecture": "岐阜県",
+        "totalDistricts": 5,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 5,
+            "totalVotes": 482689,
+            "voteRate": 53.21
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 153763,
+            "voteRate": 16.95
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 123277,
+            "voteRate": 13.59
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 84439,
+            "voteRate": 9.31
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 28872,
+            "voteRate": 3.18
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 11268,
+            "voteRate": 1.24
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 8658,
+            "voteRate": 0.95
+          }
+        ]
+      },
+      {
+        "prefecture": "静岡県",
+        "totalDistricts": 8,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 8,
+            "totalVotes": 1023050,
+            "voteRate": 60.34
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 348924,
+            "voteRate": 20.58
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 168770,
+            "voteRate": 9.95
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 96413,
+            "voteRate": 5.69
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 49696,
+            "voteRate": 2.93
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 8494,
+            "voteRate": 0.5
+          }
+        ]
+      },
+      {
+        "prefecture": "愛知県",
+        "totalDistricts": 16,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 12,
+            "totalVotes": 1584875,
+            "voteRate": 45.29
+          },
+          {
+            "party": "国民民主党",
+            "seats": 3,
+            "totalVotes": 445757,
+            "voteRate": 12.74
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "seats": 1,
+            "totalVotes": 236102,
+            "voteRate": 6.75
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 762630,
+            "voteRate": 21.79
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 194717,
+            "voteRate": 5.56
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 127051,
+            "voteRate": 3.63
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 88702,
+            "voteRate": 2.53
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 9835,
+            "voteRate": 0.28
+          }
+        ]
+      },
+      {
+        "prefecture": "三重県",
+        "totalDistricts": 4,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 4,
+            "totalVotes": 448367,
+            "voteRate": 55.44
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 221839,
+            "voteRate": 27.43
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 50969,
+            "voteRate": 6.3
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 43016,
+            "voteRate": 5.32
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 27656,
+            "voteRate": 3.42
+          }
+        ]
+      },
+      {
+        "prefecture": "滋賀県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 327137,
+            "voteRate": 51.0
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 131099,
+            "voteRate": 20.44
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 76727,
+            "voteRate": 11.96
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 38911,
+            "voteRate": 6.07
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 30202,
+            "voteRate": 4.71
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 29441,
+            "voteRate": 4.59
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 7989,
+            "voteRate": 1.25
+          }
+        ]
+      },
+      {
+        "prefecture": "京都府",
+        "totalDistricts": 6,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 4,
+            "totalVotes": 528584,
+            "voteRate": 48.09
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 1,
+            "totalVotes": 207539,
+            "voteRate": 18.88
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 1,
+            "totalVotes": 103046,
+            "voteRate": 9.37
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 150734,
+            "voteRate": 13.71
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 50362,
+            "voteRate": 4.58
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 13644,
+            "voteRate": 1.24
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 4016,
+            "voteRate": 0.37
+          }
+        ]
+      },
+      {
+        "prefecture": "大阪府",
+        "totalDistricts": 19,
+        "partyResults": [
+          {
+            "party": "日本維新の会",
+            "seats": 18,
+            "totalVotes": 1746504,
+            "voteRate": 44.91
+          },
+          {
+            "party": "自由民主党",
+            "seats": 1,
+            "totalVotes": 1019019,
+            "voteRate": 26.2
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 311640,
+            "voteRate": 8.01
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 307579,
+            "voteRate": 7.91
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 289892,
+            "voteRate": 7.45
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 109240,
+            "voteRate": 2.81
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 29964,
+            "voteRate": 0.77
+          }
+        ]
+      },
+      {
+        "prefecture": "兵庫県",
+        "totalDistricts": 12,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 11,
+            "totalVotes": 1035513,
+            "voteRate": 42.62
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 1,
+            "totalVotes": 546706,
+            "voteRate": 22.5
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 444043,
+            "voteRate": 18.27
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 147422,
+            "voteRate": 6.07
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 133359,
+            "voteRate": 5.49
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 58077,
+            "voteRate": 2.39
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 10210,
+            "voteRate": 0.42
+          }
+        ]
+      },
+      {
+        "prefecture": "奈良県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 445039,
+            "voteRate": 67.44
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 64325,
+            "voteRate": 9.75
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 60480,
+            "voteRate": 9.16
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 37067,
+            "voteRate": 5.62
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 29976,
+            "voteRate": 4.54
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 11181,
+            "voteRate": 1.69
+          }
+        ]
+      },
+      {
+        "prefecture": "和歌山県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 1,
+            "totalVotes": 95836,
+            "voteRate": 23.68
+          },
+          {
+            "party": "無所属",
+            "seats": 1,
+            "totalVotes": 0,
+            "voteRate": 0.0
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 44886,
+            "voteRate": 11.09
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 31352,
+            "voteRate": 7.75
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 30208,
+            "voteRate": 7.46
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 20292,
+            "voteRate": 5.01
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 19067,
+            "voteRate": 4.71
+          }
+        ]
+      },
+      {
+        "prefecture": "鳥取県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 133882,
+            "voteRate": 64.76
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 36132,
+            "voteRate": 17.48
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 13364,
+            "voteRate": 6.46
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 11734,
+            "voteRate": 5.68
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 11630,
+            "voteRate": 5.63
+          }
+        ]
+      },
+      {
+        "prefecture": "島根県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 165453,
+            "voteRate": 56.72
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 84929,
+            "voteRate": 29.12
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 26331,
+            "voteRate": 9.03
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 14977,
+            "voteRate": 5.13
+          }
+        ]
+      },
+      {
+        "prefecture": "岡山県",
+        "totalDistricts": 4,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 4,
+            "totalVotes": 470004,
+            "voteRate": 59.19
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 176084,
+            "voteRate": 22.18
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 58933,
+            "voteRate": 7.42
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 47848,
+            "voteRate": 6.03
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 41195,
+            "voteRate": 5.19
+          }
+        ]
+      },
+      {
+        "prefecture": "広島県",
+        "totalDistricts": 6,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 6,
+            "totalVotes": 585841,
+            "voteRate": 53.47
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 210301,
+            "voteRate": 19.19
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 115228,
+            "voteRate": 10.52
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 78211,
+            "voteRate": 7.14
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 49001,
+            "voteRate": 4.47
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 39599,
+            "voteRate": 3.61
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 8809,
+            "voteRate": 0.8
+          }
+        ]
+      },
+      {
+        "prefecture": "山口県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 370275,
+            "voteRate": 62.71
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 103656,
+            "voteRate": 17.55
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 55618,
+            "voteRate": 9.42
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 39108,
+            "voteRate": 6.62
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 14697,
+            "voteRate": 2.49
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 7149,
+            "voteRate": 1.21
+          }
+        ]
+      },
+      {
+        "prefecture": "徳島県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 172420,
+            "voteRate": 54.15
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 46960,
+            "voteRate": 14.75
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 36629,
+            "voteRate": 11.5
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 16040,
+            "voteRate": 5.04
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 14154,
+            "voteRate": 4.45
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 6504,
+            "voteRate": 2.04
+          }
+        ]
+      },
+      {
+        "prefecture": "香川県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 1,
+            "totalVotes": 190684,
+            "voteRate": 44.42
+          },
+          {
+            "party": "国民民主党",
+            "seats": 1,
+            "totalVotes": 118795,
+            "voteRate": 27.67
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 1,
+            "totalVotes": 73237,
+            "voteRate": 17.06
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 27969,
+            "voteRate": 6.52
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 13440,
+            "voteRate": 3.13
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 5133,
+            "voteRate": 1.2
+          }
+        ]
+      },
+      {
+        "prefecture": "愛媛県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 348138,
+            "voteRate": 58.88
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 123947,
+            "voteRate": 20.96
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 49723,
+            "voteRate": 8.41
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 46245,
+            "voteRate": 7.82
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 23180,
+            "voteRate": 3.92
+          }
+        ]
+      },
+      {
+        "prefecture": "高知県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 194566,
+            "voteRate": 64.51
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 38860,
+            "voteRate": 12.88
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 24115,
+            "voteRate": 8.0
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 23119,
+            "voteRate": 7.67
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 20942,
+            "voteRate": 6.94
+          }
+        ]
+      },
+      {
+        "prefecture": "福岡県",
+        "totalDistricts": 11,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 10,
+            "totalVotes": 1164633,
+            "voteRate": 52.87
+          },
+          {
+            "party": "無所属",
+            "seats": 1,
+            "totalVotes": 0,
+            "voteRate": 0.0
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 313357,
+            "voteRate": 14.22
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 187938,
+            "voteRate": 8.53
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 153885,
+            "voteRate": 6.99
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 109385,
+            "voteRate": 4.97
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 62809,
+            "voteRate": 2.85
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 27965,
+            "voteRate": 1.27
+          }
+        ]
+      },
+      {
+        "prefecture": "佐賀県",
+        "totalDistricts": 2,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 190540,
+            "voteRate": 50.68
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 85185,
+            "voteRate": 22.66
+          },
+          {
+            "party": "減税日本・ゆうこく連合",
+            "seats": 0,
+            "totalVotes": 83028,
+            "voteRate": 22.08
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 17229,
+            "voteRate": 4.58
+          }
+        ]
+      },
+      {
+        "prefecture": "長崎県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 2,
+            "totalVotes": 312963,
+            "voteRate": 53.12
+          },
+          {
+            "party": "国民民主党",
+            "seats": 1,
+            "totalVotes": 93931,
+            "voteRate": 15.94
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 124476,
+            "voteRate": 21.13
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 35907,
+            "voteRate": 6.09
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 13363,
+            "voteRate": 2.27
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 8559,
+            "voteRate": 1.45
+          }
+        ]
+      },
+      {
+        "prefecture": "熊本県",
+        "totalDistricts": 4,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 4,
+            "totalVotes": 518243,
+            "voteRate": 66.5
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 109919,
+            "voteRate": 14.11
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 55802,
+            "voteRate": 7.16
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 30267,
+            "voteRate": 3.88
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 22742,
+            "voteRate": 2.92
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 16403,
+            "voteRate": 2.1
+          }
+        ]
+      },
+      {
+        "prefecture": "大分県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 242562,
+            "voteRate": 46.25
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 106498,
+            "voteRate": 20.31
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 36387,
+            "voteRate": 6.94
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 15687,
+            "voteRate": 2.99
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 9158,
+            "voteRate": 1.75
+          }
+        ]
+      },
+      {
+        "prefecture": "宮崎県",
+        "totalDistricts": 3,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 1,
+            "totalVotes": 218665,
+            "voteRate": 48.77
+          },
+          {
+            "party": "国民民主党",
+            "seats": 1,
+            "totalVotes": 73994,
+            "voteRate": 16.5
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 1,
+            "totalVotes": 72280,
+            "voteRate": 16.12
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 48301,
+            "voteRate": 10.77
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 28831,
+            "voteRate": 6.43
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 6325,
+            "voteRate": 1.41
+          }
+        ]
+      },
+      {
+        "prefecture": "鹿児島県",
+        "totalDistricts": 4,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 3,
+            "totalVotes": 396226,
+            "voteRate": 57.59
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 1,
+            "totalVotes": 145780,
+            "voteRate": 21.19
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 84852,
+            "voteRate": 12.33
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 24076,
+            "voteRate": 3.5
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 21771,
+            "voteRate": 3.16
+          }
+        ]
+      },
+      {
+        "prefecture": "沖縄県",
+        "totalDistricts": 4,
+        "partyResults": [
+          {
+            "party": "自由民主党",
+            "seats": 4,
+            "totalVotes": 293534,
+            "voteRate": 46.95
+          },
+          {
+            "party": "中道改革連合",
+            "seats": 0,
+            "totalVotes": 156948,
+            "voteRate": 25.11
+          },
+          {
+            "party": "日本共産党",
+            "seats": 0,
+            "totalVotes": 53231,
+            "voteRate": 8.51
+          },
+          {
+            "party": "参政党",
+            "seats": 0,
+            "totalVotes": 52129,
+            "voteRate": 8.34
+          },
+          {
+            "party": "れいわ新選組",
+            "seats": 0,
+            "totalVotes": 20091,
+            "voteRate": 3.21
+          },
+          {
+            "party": "国民民主党",
+            "seats": 0,
+            "totalVotes": 19230,
+            "voteRate": 3.08
+          },
+          {
+            "party": "日本維新の会",
+            "seats": 0,
+            "totalVotes": 11521,
+            "voteRate": 1.84
+          }
+        ]
+      }
+    ],
+    "districts": []
+  }
+}

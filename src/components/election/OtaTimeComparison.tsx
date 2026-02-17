@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -19,6 +19,8 @@ import {
   Radar,
   LineChart,
   Line,
+  Cell,
+  ReferenceLine,
 } from 'recharts';
 import { getPartyColor } from '@/constants/parties';
 import { generatePartyComparison, classifySwing, getSwingColor } from '@/lib/election-utils';
@@ -31,6 +33,31 @@ interface PartyResult {
   rate: number;
 }
 
+interface DistrictData {
+  id: number;
+  dayOfEligibleVoters: number;
+  dayOfVoters: number;
+  dayOfTurnoutRate: number;
+  earlyVoters: number;
+  absenteeVoters: number;
+  totalVoters: number;
+  totalTurnoutRate: number;
+}
+
+interface DistrictVoteEntry {
+  id: number;
+  eligibleVoters: number;
+  totalVotes: number;
+  invalidVotes: number;
+  turnoutRate: number;
+  [party: string]: number | { votes: number; rate: number };
+}
+
+interface DistrictVotesData {
+  parties: string[];
+  districts: DistrictVoteEntry[];
+}
+
 interface OtaTimeComparisonProps {
   syosenkyoku2024: PartyResult[];
   syosenkyoku2026: PartyResult[];
@@ -40,6 +67,8 @@ interface OtaTimeComparisonProps {
   totalVotesSyo2026: number;
   totalVotesHirei2024: number;
   totalVotesHirei2026: number;
+  districts2024: DistrictData[];
+  districts2026: DistrictData[];
 }
 
 interface CustomTooltipProps {
@@ -124,7 +153,18 @@ export function OtaTimeComparison({
   totalVotesSyo2026,
   totalVotesHirei2024,
   totalVotesHirei2026,
+  districts2024,
+  districts2026,
 }: OtaTimeComparisonProps) {
+  // 投票区別得票データ（2026年のみ）
+  const [districtVotesData, setDistrictVotesData] = useState<DistrictVotesData | null>(null);
+
+  useEffect(() => {
+    fetch('/data/ota-district-votes.json')
+      .then((res) => res.json())
+      .then((data) => setDistrictVotesData(data))
+      .catch(() => {});
+  }, []);
   // 小選挙区の比較データ
   const syoComparisonData = useMemo(
     () => generatePartyComparison(syosenkyoku2024, syosenkyoku2026),
@@ -155,6 +195,43 @@ export function OtaTimeComparison({
       };
     });
   }, [syosenkyoku2024, syosenkyoku2026]);
+
+  // 投票区別投票率変化データ（2024→2026）
+  const districtTurnoutChange = useMemo(() => {
+    if (!districts2024.length || !districts2026.length) return [];
+
+    return districts2026
+      .map((d26) => {
+        const d24 = districts2024.find((d) => d.id === d26.id);
+        const rate2024 = d24?.totalTurnoutRate || 0;
+        const rate2026 = d26.totalTurnoutRate;
+        const diff = rate2026 - rate2024;
+        return {
+          district: `第${d26.id}投票区`,
+          id: d26.id,
+          rate2024,
+          rate2026,
+          diff,
+        };
+      })
+      .sort((a, b) => b.diff - a.diff);
+  }, [districts2024, districts2026]);
+
+  // 2026年 投票区別政党得票率データ
+  const districtPartyData = useMemo(() => {
+    if (!districtVotesData) return [];
+    const { parties, districts } = districtVotesData;
+    return districts.slice(0, 20).map((d) => {
+      const entry: Record<string, string | number> = { district: `第${d.id}` };
+      parties.forEach((party) => {
+        const partyData = d[party];
+        if (partyData && typeof partyData === 'object' && 'rate' in partyData) {
+          entry[party] = partyData.rate;
+        }
+      });
+      return entry;
+    });
+  }, [districtVotesData]);
 
   // 投票数変化サマリー
   const voteSummary = useMemo(() => {
@@ -429,6 +506,105 @@ export function OtaTimeComparison({
           </ResponsiveContainer>
         </CardContent>
       </Card>
+
+      {/* 投票区別投票率変化グラフ */}
+      {districtTurnoutChange.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">投票区別 投票率変化（2024年 → 2026年）</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xs text-muted-foreground mb-4">
+              各投票区の投票率変化幅を表示。正の値は投票率上昇、負の値は低下を示します。
+            </p>
+            <ResponsiveContainer width="100%" height={Math.max(400, districtTurnoutChange.length * 22)}>
+              <BarChart data={districtTurnoutChange} layout="vertical">
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} />
+                <XAxis
+                  type="number"
+                  tickFormatter={(v) => `${v > 0 ? '+' : ''}${v.toFixed(1)}pt`}
+                />
+                <YAxis
+                  type="category"
+                  dataKey="district"
+                  width={90}
+                  tick={{ fontSize: 10 }}
+                />
+                <Tooltip
+                  content={({ active, payload, label }) => {
+                    if (active && payload && payload.length) {
+                      const data = payload[0].payload;
+                      return (
+                        <div className="bg-popover border rounded-lg shadow-lg p-3 text-sm">
+                          <p className="font-bold mb-2">{label}</p>
+                          <div className="space-y-1">
+                            <div className="flex justify-between gap-4">
+                              <span>2024年:</span>
+                              <span className="font-mono">{data.rate2024.toFixed(2)}%</span>
+                            </div>
+                            <div className="flex justify-between gap-4">
+                              <span>2026年:</span>
+                              <span className="font-mono">{data.rate2026.toFixed(2)}%</span>
+                            </div>
+                            <div className="border-t pt-1 mt-1 flex justify-between gap-4">
+                              <span>変化:</span>
+                              <span className={`font-mono font-bold ${data.diff > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                {data.diff > 0 ? '+' : ''}{data.diff.toFixed(2)}pt
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    }
+                    return null;
+                  }}
+                />
+                <ReferenceLine x={0} stroke="#666" />
+                <Bar dataKey="diff" name="投票率変化(pt)" radius={[0, 4, 4, 0]}>
+                  {districtTurnoutChange.map((entry) => (
+                    <Cell
+                      key={entry.id}
+                      fill={entry.diff >= 0 ? '#22c55e' : '#ef4444'}
+                    />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* 2026年 投票区別政党得票率分布 */}
+      {districtVotesData && districtPartyData.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">2026年 投票区別 政党得票率分布（上位20投票区）</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xs text-muted-foreground mb-4">
+              各投票区における政党別得票率の分布を表示します。
+            </p>
+            <ResponsiveContainer width="100%" height={500}>
+              <BarChart data={districtPartyData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="district" tick={{ fontSize: 10 }} />
+                <YAxis tickFormatter={(v) => `${v}%`} domain={[0, 100]} />
+                <Tooltip formatter={(value) => [`${Number(value).toFixed(1)}%`, '']} />
+                <Legend />
+                {districtVotesData.parties.map((party) => (
+                  <Bar
+                    key={party}
+                    dataKey={party}
+                    stackId="a"
+                    fill={getPartyColor(party)}
+                    name={party}
+                  />
+                ))}
+              </BarChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

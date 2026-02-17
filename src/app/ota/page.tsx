@@ -214,7 +214,7 @@ function OtaContent() {
   }
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-4 md:p-6 space-y-4 md:space-y-6">
       {/* コントロールパネル */}
       <Card>
         <CardContent className="pt-6">
@@ -318,14 +318,14 @@ function OtaContent() {
       </div>
 
       {/* メインタブ */}
-      <Tabs defaultValue="area" className="space-y-4">
+      <Tabs defaultValue="comparison" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="area" className="gap-2">
-            <MapPin className="h-4 w-4" />
+          <TabsTrigger value="area" className="gap-1 md:gap-2">
+            <MapPin className="h-4 w-4 hidden sm:block" />
             投票区別分析
           </TabsTrigger>
-          <TabsTrigger value="comparison" className="gap-2">
-            <BarChart3 className="h-4 w-4" />
+          <TabsTrigger value="comparison" className="gap-1 md:gap-2">
+            <BarChart3 className="h-4 w-4 hidden sm:block" />
             時系列比較
           </TabsTrigger>
         </TabsList>
@@ -352,6 +352,8 @@ function OtaContent() {
             totalVotesSyo2026={senkyokuData['2026'].syosenkyoku.totalVotes}
             totalVotesHirei2024={senkyokuData['2024'].hirei.totalVotes}
             totalVotesHirei2026={senkyokuData['2026'].hirei.totalVotes}
+            districts2024={senkyokuData['2024'].districts}
+            districts2026={senkyokuData['2026'].districts}
           />
         </TabsContent>
       </Tabs>
