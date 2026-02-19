@@ -11,16 +11,51 @@ import { NationalShouView } from '@/components/election/NationalShouView';
 import { Calendar, Building, ListOrdered } from 'lucide-react';
 import type { NationalElectionData } from '@/types/national-election';
 
+type ElectionType = 'shugiin' | 'sangiin';
+
+const YEAR_OPTIONS: Record<ElectionType, { value: string; label: string }[]> = {
+  shugiin: [
+    { value: '2024', label: '令和6年(2024)' },
+    { value: '2026', label: '令和8年(2026)' },
+  ],
+  sangiin: [
+    { value: '2022', label: '令和4年(2022)' },
+    { value: '2025', label: '令和7年(2025)' },
+  ],
+};
+
+const ELECTION_DATES: Record<string, string> = {
+  'shugiin_2024': '2024年10月27日',
+  'shugiin_2026': '2026年2月8日',
+  'sangiin_2022': '2022年7月10日',
+  'sangiin_2025': '2025年7月20日',
+};
+
 function NationalContent() {
-  const [year, setYear] = useState<'2024' | '2026'>('2026');
+  const [electionType, setElectionType] = useState<ElectionType>('shugiin');
+  const [year, setYear] = useState('2026');
   const [data, setData] = useState<NationalElectionData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  // 選挙種別変更時に年度をリセット
   useEffect(() => {
+    const options = YEAR_OPTIONS[electionType];
+    const validYears = options.map((o) => o.value);
+    if (!validYears.includes(year)) {
+      setYear(options[options.length - 1].value);
+    }
+  }, [electionType, year]);
+
+  // year が electionType に対して有効な場合のみフェッチ
+  const validYears = YEAR_OPTIONS[electionType].map((o) => o.value);
+  const isValidCombination = validYears.includes(year);
+
+  useEffect(() => {
+    if (!isValidCombination) return;
     setLoading(true);
     setError(false);
-    fetch(`/data/elections/shugiin_${year}.json`)
+    fetch(`/data/elections/${electionType}_${year}.json`)
       .then((res) => {
         if (!res.ok) throw new Error('Not found');
         return res.json();
@@ -34,7 +69,11 @@ function NationalContent() {
         setError(true);
         setLoading(false);
       });
-  }, [year]);
+  }, [electionType, year, isValidCombination]);
+
+  const isSangiin = electionType === 'sangiin';
+  const dateKey = `${electionType}_${year}`;
+  const districtLabel = isSangiin ? '選挙区' : '小選挙区';
 
   return (
     <div className="p-4 md:p-6 space-y-4 md:space-y-6">
@@ -42,35 +81,57 @@ function NationalContent() {
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-wrap gap-4 items-center">
+            {/* 選挙種別セレクタ */}
             <div className="flex items-center gap-2">
-              <Calendar className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">年度:</span>
+              <Building className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm font-medium">選挙:</span>
               <div className="flex border rounded-lg overflow-hidden">
                 <button
-                  onClick={() => setYear('2024')}
+                  onClick={() => setElectionType('shugiin')}
                   className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    year === '2024'
+                    electionType === 'shugiin'
                       ? 'bg-primary text-primary-foreground'
                       : 'bg-background hover:bg-muted'
                   }`}
                 >
-                  令和6年(2024)
+                  衆議院
                 </button>
                 <button
-                  onClick={() => setYear('2026')}
+                  onClick={() => setElectionType('sangiin')}
                   className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    year === '2026'
+                    electionType === 'sangiin'
                       ? 'bg-primary text-primary-foreground'
                       : 'bg-background hover:bg-muted'
                   }`}
                 >
-                  令和8年(2026)
+                  参議院
                 </button>
               </div>
             </div>
 
+            {/* 年度セレクタ */}
+            <div className="flex items-center gap-2">
+              <Calendar className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm font-medium">年度:</span>
+              <div className="flex border rounded-lg overflow-hidden">
+                {YEAR_OPTIONS[electionType].map((opt) => (
+                  <button
+                    key={opt.value}
+                    onClick={() => setYear(opt.value)}
+                    className={`px-4 py-2 text-sm font-medium transition-colors ${
+                      year === opt.value
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-background hover:bg-muted'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <Badge variant="outline" className="ml-auto">
-              {year === '2024' ? '2024年10月27日' : '2026年2月8日'} 執行
+              {ELECTION_DATES[dateKey] ?? `${year}年`} 執行
             </Badge>
           </div>
         </CardContent>
@@ -90,7 +151,7 @@ function NationalContent() {
                 {year}年のデータはまだ用意されていません
               </p>
               <p className="text-sm text-muted-foreground">
-                データファイル（data/elections/shugiin_{year}.json）を配置してください
+                データファイル（data/elections/{electionType}_{year}.json）を配置してください
               </p>
             </div>
           </CardContent>
@@ -102,7 +163,7 @@ function NationalContent() {
           <TabsList>
             <TabsTrigger value="shou" className="gap-1 md:gap-2">
               <Building className="h-4 w-4 hidden sm:block" />
-              小選挙区
+              {districtLabel}
             </TabsTrigger>
             <TabsTrigger value="hirei" className="gap-1 md:gap-2">
               <ListOrdered className="h-4 w-4 hidden sm:block" />
@@ -134,7 +195,7 @@ export default function NationalPage() {
     <AppShell>
       <Header
         title="全国分析"
-        description="衆議院選挙 全国分析（小選挙区・比例代表）"
+        description="国政選挙 全国分析（選挙区・比例代表）"
       />
       <NationalContent />
     </AppShell>

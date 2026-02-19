@@ -9,6 +9,7 @@ import {
   Building2,
   Globe,
   X,
+  Landmark,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -19,6 +20,7 @@ interface SidebarProps {
 
 const navItems = [
   { href: '/national', label: '全国分析', icon: Globe },
+  { href: '/unified-local-elections', label: '統一地方選挙', icon: Landmark },
   { href: '/', label: '東京都全体', icon: Map },
   { href: '/meguro', label: '目黒区分析', icon: Vote },
   { href: '/ota', label: '大田区分析', icon: Building2 },
@@ -73,7 +75,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
       </nav>
 
       <div className="mt-auto p-4 border-t text-xs text-muted-foreground">
-        <p>2026年衆議院選挙</p>
+        <p>国政選挙</p>
         <p>データ可視化ツール</p>
       </div>
     </aside>

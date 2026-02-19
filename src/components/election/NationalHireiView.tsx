@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -35,10 +35,23 @@ interface NationalHireiViewProps {
 type SortKey = 'rank' | 'name' | 'sekihairitsu' | 'votes' | 'result';
 
 export function NationalHireiView({ blocks, totalSeats }: NationalHireiViewProps) {
-  const [selectedBlock, setSelectedBlock] = useState<string | null>(null);
+  const isSingleBlock = blocks.length === 1;
+  const [selectedBlock, setSelectedBlock] = useState<string | null>(
+    isSingleBlock ? blocks[0].name : null
+  );
   const [selectedParty, setSelectedParty] = useState<string | null>(null);
   const [sortKey, setSortKey] = useState<SortKey>('rank');
   const [sortAsc, setSortAsc] = useState(true);
+
+  // blocks が変わったらリセット (選挙種別切り替え対応)
+  useEffect(() => {
+    if (isSingleBlock) {
+      setSelectedBlock(blocks[0].name);
+    } else {
+      setSelectedBlock(null);
+    }
+    setSelectedParty(null);
+  }, [blocks, isSingleBlock]);
 
   const currentBlock = useMemo(
     () => blocks.find((b) => b.name === selectedBlock) || null,
@@ -184,14 +197,16 @@ export function NationalHireiView({ blocks, totalSeats }: NationalHireiViewProps
   if (!selectedParty && currentBlock) {
     return (
       <div className="space-y-6">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" onClick={() => setSelectedBlock(null)}>
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            ブロック一覧
-          </Button>
-          <span className="text-muted-foreground">/</span>
-          <span className="font-medium">{currentBlock.name}ブロック</span>
-        </div>
+        {!isSingleBlock && (
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="sm" onClick={() => setSelectedBlock(null)}>
+              <ChevronLeft className="h-4 w-4 mr-1" />
+              ブロック一覧
+            </Button>
+            <span className="text-muted-foreground">/</span>
+            <span className="font-medium">{currentBlock.name}ブロック</span>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card>
@@ -274,16 +289,29 @@ export function NationalHireiView({ blocks, totalSeats }: NationalHireiViewProps
     return (
       <div className="space-y-6">
         <div className="flex items-center gap-2 flex-wrap">
-          <Button variant="ghost" size="sm" onClick={() => setSelectedBlock(null)}>
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            ブロック一覧
-          </Button>
-          <span className="text-muted-foreground">/</span>
-          <Button variant="ghost" size="sm" onClick={() => setSelectedParty(null)}>
-            {currentBlock.name}ブロック
-          </Button>
-          <span className="text-muted-foreground">/</span>
-          <span className="font-medium">{currentPartyBlock.party}</span>
+          {isSingleBlock ? (
+            <>
+              <Button variant="ghost" size="sm" onClick={() => setSelectedParty(null)}>
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                政党一覧
+              </Button>
+              <span className="text-muted-foreground">/</span>
+              <span className="font-medium">{currentPartyBlock.party}</span>
+            </>
+          ) : (
+            <>
+              <Button variant="ghost" size="sm" onClick={() => setSelectedBlock(null)}>
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                ブロック一覧
+              </Button>
+              <span className="text-muted-foreground">/</span>
+              <Button variant="ghost" size="sm" onClick={() => setSelectedParty(null)}>
+                {currentBlock.name}ブロック
+              </Button>
+              <span className="text-muted-foreground">/</span>
+              <span className="font-medium">{currentPartyBlock.party}</span>
+            </>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
