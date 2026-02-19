@@ -3,30 +3,42 @@
 import { useEffect, useState } from 'react';
 import { AppShell } from '@/components/app-shell';
 import { Header } from '@/components/layout/header';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { NationalHireiView } from '@/components/election/NationalHireiView';
 import { NationalShouView } from '@/components/election/NationalShouView';
-import { Calendar, Building, ListOrdered } from 'lucide-react';
+import { VoteRateTrendChart } from '@/components/election/VoteRateTrendChart';
+import { Calendar, Building, ListOrdered, TrendingUp } from 'lucide-react';
 import type { NationalElectionData } from '@/types/national-election';
+
+interface NationalTrendData {
+  shugiin_hirei: Array<Record<string, string | number>>;
+  sangiin_hirei: Array<Record<string, string | number>>;
+}
+
+const TREND_PARTIES = ['自由民主党', '立憲民主党', '公明党', '日本共産党', '日本維新の会', '国民民主党', 'れいわ新選組', '参政党'];
 
 type ElectionType = 'shugiin' | 'sangiin';
 
 const YEAR_OPTIONS: Record<ElectionType, { value: string; label: string }[]> = {
   shugiin: [
+    { value: '2017', label: '平成29年(2017)' },
     { value: '2024', label: '令和6年(2024)' },
     { value: '2026', label: '令和8年(2026)' },
   ],
   sangiin: [
+    { value: '2019', label: '令和元年(2019)' },
     { value: '2022', label: '令和4年(2022)' },
     { value: '2025', label: '令和7年(2025)' },
   ],
 };
 
 const ELECTION_DATES: Record<string, string> = {
+  'shugiin_2017': '2017年10月22日',
   'shugiin_2024': '2024年10月27日',
   'shugiin_2026': '2026年2月8日',
+  'sangiin_2019': '2019年7月21日',
   'sangiin_2022': '2022年7月10日',
   'sangiin_2025': '2025年7月20日',
 };
@@ -37,6 +49,14 @@ function NationalContent() {
   const [data, setData] = useState<NationalElectionData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [trendData, setTrendData] = useState<NationalTrendData | null>(null);
+
+  useEffect(() => {
+    fetch('/data/elections/national_party_trends.json')
+      .then((r) => r.json())
+      .then((json) => setTrendData(json as NationalTrendData))
+      .catch(console.error);
+  }, []);
 
   // 選挙種別変更時に年度をリセット
   useEffect(() => {
@@ -185,6 +205,49 @@ function NationalContent() {
             />
           </TabsContent>
         </Tabs>
+      )}
+
+      {/* 得票率推移グラフ（常時表示） */}
+      {trendData && (
+        <div className="space-y-4 pt-2">
+          <div className="flex items-center gap-2">
+            <TrendingUp className="h-5 w-5 text-primary" />
+            <h2 className="text-base font-semibold">比例代表 得票率推移</h2>
+            <Badge variant="outline" className="text-xs">過去3回分</Badge>
+          </div>
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium">衆院比例 得票率推移（2017・2021・2024年）</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <VoteRateTrendChart
+                  data={trendData.shugiin_hirei.map((d) => ({ ...d, year: String(d.year) }))}
+                  parties={TREND_PARTIES}
+                  defaultChartType="line"
+                  note="総務省「衆議院議員総選挙比例代表結果」"
+                  height={280}
+                />
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium">参院比例 得票率推移（2019・2022・2025年）</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <VoteRateTrendChart
+                  data={trendData.sangiin_hirei.map((d) => ({ ...d, year: String(d.year) }))}
+                  parties={TREND_PARTIES}
+                  defaultChartType="line"
+                  note="総務省「参議院議員通常選挙比例代表結果」"
+                  height={280}
+                />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       )}
     </div>
   );

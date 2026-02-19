@@ -6,7 +6,8 @@ import { Header } from '@/components/layout/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import { JapanTileMap } from '@/components/election/JapanTileMap';
+import { JapanTileMap, TileMapPrefectureData, MapColorMode } from '@/components/election/JapanTileMap';
+import { VoteRateTrendChart } from '@/components/election/VoteRateTrendChart';
 import {
   BarChart,
   Bar,
@@ -23,29 +24,11 @@ import {
   Legend,
 } from 'recharts';
 import { getPartyColor } from '@/constants/parties';
-import { formatPercent } from '@/lib/utils';
-import { MapPin, Vote, TrendingUp, TrendingDown, Users, Building } from 'lucide-react';
+import { MapPin, Vote, TrendingUp, TrendingDown, Users, Building, BarChart2 } from 'lucide-react';
 
-type Year = '2023' | '2019';
+type Year = '2023' | '2019' | '2015';
 
-interface PrefectureElectionData {
-  turnout: number;
-  total_seats: number;
-  votes_by_party: Record<string, number>;
-  winner_count: Record<string, number>;
-  note?: string;
-}
-
-interface PrefectureData {
-  id: string;
-  name: string;
-  region: string;
-  turnout: number;
-  total_seats: number;
-  votes_by_party: Record<string, number>;
-  winner_count: Record<string, number>;
-  note?: string;
-}
+type PrefectureData = TileMapPrefectureData & { note?: string };
 
 interface WardData {
   id: string;
@@ -65,8 +48,19 @@ interface TokyoElectionData {
   summary: { ku_avg_turnout: number; total_wards: number; total_seats: number };
 }
 
+interface TrendDataJson {
+  unified_local: Array<Record<string, string | number>>;
+  tokyo_ward_hirei: Array<Record<string, string | number>>;
+}
+
 const LOCAL_PARTIES = ['自民党', '立憲民主党', '公明党', '共産党', '維新の会', '国民民主党', '無所属・その他'];
 const TOKYO_PARTIES = ['自民党', '立憲民主党', '公明党', '共産党', '維新の会', '都民ファースト', '国民民主党', '無所属・その他'];
+
+const YEAR_LABELS: Record<Year, string> = {
+  '2023': '(第20回)',
+  '2019': '(第19回)',
+  '2015': '(第18回)',
+};
 
 function StatCard({
   title,
@@ -105,10 +99,12 @@ function PrefectureDetail({
   pref,
   prevPref,
   year,
+  prevYear,
 }: {
   pref: PrefectureData;
   prevPref: PrefectureData | null;
   year: Year;
+  prevYear: Year | null;
 }) {
   const parties = LOCAL_PARTIES;
   const topParty = parties.reduce((a, b) =>
@@ -119,22 +115,21 @@ function PrefectureDetail({
     .map((p) => ({ party: p, rate: pref.votes_by_party[p] || 0, seats: pref.winner_count[p] || 0 }))
     .sort((a, b) => b.rate - a.rate);
 
-  const radarData = year === '2023' && prevPref
+  const radarData = prevYear && prevPref
     ? parties.map((p) => ({
         party: p.replace('・その他', '').replace('の会', '').slice(0, 4),
-        '2023': pref.votes_by_party[p] || 0,
-        '2019': prevPref.votes_by_party[p] || 0,
+        [year]: pref.votes_by_party[p] || 0,
+        [prevYear]: prevPref.votes_by_party[p] || 0,
       }))
     : null;
 
   return (
     <div className="space-y-4">
-      {/* 基本情報 */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <StatCard
           title="投票率"
           value={`${pref.turnout.toFixed(1)}%`}
-          sub={year === '2023' ? '2023年' : '2019年'}
+          sub={year + '年'}
           icon={Vote}
           diff={prevPref ? pref.turnout - prevPref.turnout : undefined}
         />
@@ -163,7 +158,6 @@ function PrefectureDetail({
         </p>
       )}
 
-      {/* 政党別得票率 */}
       <Card>
         <CardHeader>
           <CardTitle className="text-base">{pref.name} 政党別得票率</CardTitle>
@@ -191,19 +185,18 @@ function PrefectureDetail({
         </CardContent>
       </Card>
 
-      {/* 比較レーダーチャート (2023のみ) */}
       {radarData && (
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">2019年 vs 2023年 比較</CardTitle>
+            <CardTitle className="text-base">{prevYear}年 vs {year}年 比較</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={280}>
               <RadarChart data={radarData}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="party" tick={{ fontSize: 10 }} />
-                <Radar name="2019年" dataKey="2019" stroke="#94a3b8" fill="#94a3b8" fillOpacity={0.3} />
-                <Radar name="2023年" dataKey="2023" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.4} />
+                <Radar name={prevYear + '年'} dataKey={prevYear as string} stroke="#94a3b8" fill="#94a3b8" fillOpacity={0.3} />
+                <Radar name={year + '年'} dataKey={year} stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.4} />
                 <Legend />
               </RadarChart>
             </ResponsiveContainer>
@@ -211,7 +204,6 @@ function PrefectureDetail({
         </Card>
       )}
 
-      {/* 当選人数 */}
       <Card>
         <CardHeader>
           <CardTitle className="text-base">当選人数</CardTitle>
@@ -235,8 +227,11 @@ function PrefectureDetail({
   );
 }
 
-function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
-  const [tokyoData, setTokyoData] = useState<Record<Year, TokyoElectionData | null>>({ '2023': null, '2019': null });
+function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year | null }) {
+  const [tokyoData, setTokyoData] = useState<Record<string, TokyoElectionData | null>>({
+    '2023': null,
+    '2019': null,
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -253,8 +248,8 @@ function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
       .finally(() => setLoading(false));
   }, []);
 
-  const currentData = tokyoData[year];
-  const prevData = tokyoData[prevYear];
+  const currentData = tokyoData[year] ?? null;
+  const prevData = prevYear ? (tokyoData[prevYear] ?? null) : null;
 
   const wardComparison = useMemo(() => {
     if (!currentData) return [];
@@ -280,7 +275,6 @@ function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
       .sort((a, b) => b.avgRate - a.avgRate);
   }, [currentData]);
 
-  // 大田区との比較
   const otaWard = currentData?.wards.find((w) => w.name === '大田区');
   const tokyoAvgTurnout = currentData?.summary.ku_avg_turnout;
 
@@ -292,11 +286,16 @@ function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
     );
   }
 
-  if (!currentData) return <p className="text-muted-foreground">データがありません</p>;
+  if (!currentData) {
+    return (
+      <p className="text-muted-foreground p-4">
+        {year}年の東京23区詳細データはありません（東京都は都議会データを参照）
+      </p>
+    );
+  }
 
   return (
     <div className="space-y-4">
-      {/* サマリー */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <StatCard
           title="23区平均投票率"
@@ -326,7 +325,6 @@ function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {/* 投票率ランキング（区別） */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base">23区 投票率ランキング（{year}年）</CardTitle>
@@ -368,7 +366,6 @@ function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
           </CardContent>
         </Card>
 
-        {/* 政党別議席 */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base">23区合計 政党別当選人数（{year}年）</CardTitle>
@@ -397,7 +394,6 @@ function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
         </Card>
       </div>
 
-      {/* 大田区詳細 */}
       {otaWard && (
         <Card className="border-yellow-300 dark:border-yellow-700">
           <CardHeader>
@@ -490,34 +486,51 @@ function TokyoSection({ year, prevYear }: { year: Year; prevYear: Year }) {
 
 function UnifiedLocalElectionsContent() {
   const [year, setYear] = useState<Year>('2023');
-  const [allData, setAllData] = useState<Record<Year, PrefectureData[]>>({ '2023': [], '2019': [] });
+  const [allData, setAllData] = useState<Record<Year, PrefectureData[]>>({ '2023': [], '2019': [], '2015': [] });
   const [loading, setLoading] = useState(true);
   const [selectedPref, setSelectedPref] = useState<PrefectureData | null>(null);
+  const [colorMode, setColorMode] = useState<MapColorMode>('turnout');
+  const [colorParty, setColorParty] = useState<string>('自民党');
+  const [activeTab, setActiveTab] = useState('prefecture');
+  const [trendData, setTrendData] = useState<TrendDataJson | null>(null);
 
-  const prevYear: Year = year === '2023' ? '2019' : '2023';
+  const prevYear: Year | null = year === '2023' ? '2019' : year === '2019' ? '2015' : null;
 
   useEffect(() => {
-    fetch('/data/unified-local-elections/prefectures.json')
-      .then((r) => r.json())
-      .then((json) => {
+    Promise.all([
+      fetch('/data/unified-local-elections/prefectures.json').then((r) => r.json()),
+      fetch('/data/unified-local-elections/prefectures_2015.json').then((r) => r.json()),
+      fetch('/data/elections/national_party_trends.json').then((r) => r.json()),
+    ])
+      .then(([mainJson, json2015, trendJson]) => {
         setAllData({
-          '2023': json.elections['2023']?.prefectures ?? [],
-          '2019': json.elections['2019']?.prefectures ?? [],
+          '2023': mainJson.elections['2023']?.prefectures ?? [],
+          '2019': mainJson.elections['2019']?.prefectures ?? [],
+          '2015': json2015.prefectures ?? [],
         });
+        setTrendData(trendJson as TrendDataJson);
       })
       .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
   const currentPrefs = allData[year];
-  const prevPrefs = allData[prevYear];
+  const prevPrefs = prevYear ? allData[prevYear] : [];
 
   const selectedPrevPref = useMemo(() => {
-    if (!selectedPref) return null;
+    if (!selectedPref || !prevYear) return null;
     return prevPrefs.find((p) => p.id === selectedPref.id) ?? null;
-  }, [selectedPref, prevPrefs]);
+  }, [selectedPref, prevPrefs, prevYear]);
 
-  // 全国集計
+  const handlePrefSelect = (pref: TileMapPrefectureData) => {
+    setSelectedPref(pref as PrefectureData);
+    if (pref.id === '13') {
+      setActiveTab('tokyo');
+    } else {
+      setActiveTab('prefecture');
+    }
+  };
+
   const nationalStats = useMemo(() => {
     if (!currentPrefs.length) return null;
     const avgTurnout = currentPrefs.reduce((s, p) => s + p.turnout, 0) / currentPrefs.length;
@@ -536,7 +549,6 @@ function UnifiedLocalElectionsContent() {
     return prevPrefs.reduce((s, p) => s + p.turnout, 0) / prevPrefs.length;
   }, [prevPrefs]);
 
-  // 全国政党別集計
   const nationalPartyData = useMemo(() => {
     if (!currentPrefs.length) return [];
     const totals: Record<string, { rate: number; seats: number; count: number }> = {};
@@ -557,6 +569,9 @@ function UnifiedLocalElectionsContent() {
       .sort((a, b) => b.totalSeats - a.totalSeats);
   }, [currentPrefs]);
 
+  const trendParties = ['自民党', '立憲民主党', '公明党', '共産党', '維新の会', '国民民主党'];
+  const tokyoTrendParties = ['自民党', '立憲民主党', '公明党', '共産党', '維新の会', '都民ファースト', '国民民主党'];
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -567,28 +582,26 @@ function UnifiedLocalElectionsContent() {
 
   return (
     <div className="p-4 md:p-6 space-y-6">
-      {/* 年度セレクタ */}
+      {/* 年度・カラーモードセレクタ */}
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex border rounded-lg overflow-hidden">
-          {(['2023', '2019'] as Year[]).map((y) => (
+          {(['2023', '2019', '2015'] as Year[]).map((y) => (
             <button
               key={y}
               onClick={() => setYear(y)}
-              className={`px-5 py-2 text-sm font-medium transition-colors ${
+              className={`px-4 py-2 text-sm font-medium transition-colors ${
                 year === y ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-muted'
               }`}
             >
               {y}年
-              <span className="ml-1 text-xs opacity-70">
-                {y === '2023' ? '(第20回)' : '(第19回)'}
-              </span>
+              <span className="ml-1 text-xs opacity-70">{YEAR_LABELS[y]}</span>
             </button>
           ))}
         </div>
         <Badge variant="outline">統一地方選挙 都道府県議会議員選挙</Badge>
-        {year === '2023' && (
+        {prevYear && (
           <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-            2019年との比較モード
+            {prevYear}年との比較モード
           </Badge>
         )}
       </div>
@@ -632,31 +645,71 @@ function UnifiedLocalElectionsContent() {
             <CardHeader className="pb-2">
               <CardTitle className="text-base flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                インタラクティブ地図（{year}年 投票率）
+                インタラクティブ地図（{year}年）
               </CardTitle>
               <p className="text-xs text-muted-foreground">
-                都道府県をクリックすると詳細が表示されます
+                都道府県をクリックすると詳細が表示されます。東京をクリックすると23区分析に切り替わります。
               </p>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-3">
+              {/* カラーモード切替 */}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs text-muted-foreground">色分け:</span>
+                {([
+                  ['turnout', '投票率'],
+                  ['party', '政党別得票率'],
+                  ...(prevYear ? [['change', '前回比変化']] as [MapColorMode, string][] : []),
+                ] as [MapColorMode, string][]).map(([mode, label]) => (
+                  <button
+                    key={mode}
+                    onClick={() => setColorMode(mode)}
+                    className={`px-2.5 py-1 text-xs rounded font-medium transition-colors ${
+                      colorMode === mode
+                        ? 'bg-primary text-primary-foreground'
+                        : 'border hover:bg-muted'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+                {colorMode === 'party' && (
+                  <select
+                    value={colorParty}
+                    onChange={(e) => setColorParty(e.target.value)}
+                    className="text-xs border rounded px-2 py-1 bg-background"
+                  >
+                    {LOCAL_PARTIES.filter((p) => p !== '無所属・その他').map((p) => (
+                      <option key={p} value={p}>{p}</option>
+                    ))}
+                  </select>
+                )}
+              </div>
+
               <JapanTileMap
                 prefectures={currentPrefs}
                 selectedId={selectedPref?.id ?? null}
-                onSelect={(pref) => setSelectedPref(pref)}
+                onSelect={handlePrefSelect}
+                colorMode={colorMode}
+                colorParty={colorMode === 'party' ? colorParty : undefined}
+                prevPrefectures={colorMode === 'change' && prevYear ? prevPrefs : undefined}
               />
             </CardContent>
           </Card>
         </div>
 
-        {/* 都道府県詳細 / 東京都重点 */}
+        {/* 都道府県詳細 / 東京都重点 / 全国集計 / 推移グラフ */}
         <div>
-          <Tabs defaultValue="prefecture" className="space-y-4">
-            <TabsList>
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
+            <TabsList className="flex flex-wrap gap-1 h-auto">
               <TabsTrigger value="prefecture">
-                {selectedPref ? `${selectedPref.name}` : '都道府県詳細'}
+                {selectedPref ? selectedPref.name : '都道府県詳細'}
               </TabsTrigger>
               <TabsTrigger value="tokyo">東京都重点分析</TabsTrigger>
               <TabsTrigger value="national">全国政党集計</TabsTrigger>
+              <TabsTrigger value="trend" className="gap-1">
+                <BarChart2 className="h-3.5 w-3.5" />
+                推移グラフ
+              </TabsTrigger>
             </TabsList>
 
             {/* 都道府県詳細 */}
@@ -666,6 +719,7 @@ function UnifiedLocalElectionsContent() {
                   pref={selectedPref}
                   prevPref={selectedPrevPref}
                   year={year}
+                  prevYear={prevYear}
                 />
               ) : (
                 <Card>
@@ -746,6 +800,44 @@ function UnifiedLocalElectionsContent() {
                 </CardContent>
               </Card>
             </TabsContent>
+
+            {/* 推移グラフ */}
+            <TabsContent value="trend" className="space-y-4">
+              {trendData ? (
+                <>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-base">統一地方選挙 全国得票率推移（2015・2019・2023年）</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <VoteRateTrendChart
+                        data={trendData.unified_local.map((d) => ({ ...d, year: String(d.year) }))}
+                        parties={trendParties}
+                        defaultChartType="line"
+                        note="総務省「統一地方選挙結果調」"
+                        height={300}
+                      />
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-base">東京23区 政党別得票率推移（2015・2019・2023年）</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <VoteRateTrendChart
+                        data={trendData.tokyo_ward_hirei.map((d) => ({ ...d, year: String(d.year) }))}
+                        parties={tokyoTrendParties}
+                        defaultChartType="stacked"
+                        note="総務省「統一地方選挙結果調」東京都特別区"
+                        height={300}
+                      />
+                    </CardContent>
+                  </Card>
+                </>
+              ) : (
+                <p className="text-muted-foreground">推移データを読み込み中...</p>
+              )}
+            </TabsContent>
           </Tabs>
         </div>
       </div>
@@ -758,7 +850,7 @@ export default function UnifiedLocalElectionsPage() {
     <AppShell>
       <Header
         title="統一地方選挙"
-        description="都道府県議会議員選挙 インタラクティブ分析（2019年・2023年）"
+        description="都道府県議会議員選挙 インタラクティブ分析（2015年・2019年・2023年）"
       />
       <UnifiedLocalElectionsContent />
     </AppShell>

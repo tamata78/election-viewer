@@ -11,6 +11,7 @@ export const PARTIES: Party[] = [
   { id: 'sdp', name: '社会民主党', shortName: '社民', color: '#e95295' },
   { id: 'sansei', name: '参政党', shortName: '参政', color: '#ff6b00' },
   { id: 'team-mirai', name: 'チームみらい', shortName: 'みらい', color: '#00bfff' },
+  { id: 'kibo', name: '希望の党', shortName: '希望', color: '#00bcd4' },
   { id: 'hosyu', name: '日本保守党', shortName: '保守', color: '#8b4513' },
   { id: 'chudo', name: '中道改革連合', shortName: '中道', color: '#9370db' },
   { id: 'genzei', name: '減税日本・ゆうこく連合', shortName: '減税', color: '#20b2aa' },
