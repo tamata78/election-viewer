@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   FileSpreadsheet,
-  Vote,
   Map,
   Building2,
   Globe,
@@ -22,8 +21,7 @@ const navItems = [
   { href: '/national', label: '全国分析', icon: Globe },
   { href: '/unified-local-elections', label: '統一地方選挙', icon: Landmark },
   { href: '/', label: '東京都全体', icon: Map },
-  { href: '/meguro', label: '目黒区分析', icon: Vote },
-  { href: '/ota', label: '大田区分析', icon: Building2 },
+  { href: '/ward', label: '区別分析', icon: Building2 },
 ];
 
 export function Sidebar({ open, onClose }: SidebarProps) {

@@ -172,11 +172,11 @@
           "syosenkyoku": {
             "totalVotes": 112596,
             "results": [
-              {"party": "立憲民主党", "votes": 57408, "rate": 50.98},
-              {"party": "自由民主党", "votes": 30034, "rate": 26.67},
-              {"party": "日本維新の会", "votes": 12485, "rate": 11.09},
-              {"party": "参政党", "votes": 7086, "rate": 6.29},
-              {"party": "日本共産党", "votes": 5583, "rate": 4.96}
+              {"party": "無所属", "candidateName": "まつばら 仁", "votes": 57408, "rate": 50.98},
+              {"party": "自由民主党", "candidateName": "今岡 うえき", "votes": 30034, "rate": 26.67},
+              {"party": "無所属②", "candidateName": "たぶち 正文", "votes": 12485, "rate": 11.09},
+              {"party": "参政党", "candidateName": "ふじた 久美", "votes": 7086, "rate": 6.29},
+              {"party": "日本共産党", "candidateName": "和田 正子", "votes": 5583, "rate": 4.96}
             ]
           },
           "hirei": {
@@ -226,12 +226,12 @@
           "syosenkyoku": {
             "totalVotes": 123627,
             "results": [
-              {"party": "自由民主党", "votes": 40042, "rate": 32.39},
-              {"party": "チームみらい", "votes": 34706, "rate": 28.07},
-              {"party": "中道改革連合", "votes": 19663, "rate": 15.90},
-              {"party": "国民民主党", "votes": 10461, "rate": 8.46},
-              {"party": "本人届出", "votes": 12922, "rate": 10.45},
-              {"party": "参政党", "votes": 5833, "rate": 4.72}
+              {"party": "無所属", "candidateName": "まつばら 仁", "votes": 44417, "rate": 35.93},
+              {"party": "自由民主党", "candidateName": "今岡 うえき", "votes": 40042, "rate": 32.39},
+              {"party": "チームみらい", "candidateName": "うさみ 登", "votes": 14362, "rate": 11.62},
+              {"party": "国民民主党", "candidateName": "坂元 ゆうき", "votes": 10461, "rate": 8.46},
+              {"party": "日本共産党", "candidateName": "松井 かな子", "votes": 8512, "rate": 6.89},
+              {"party": "参政党", "candidateName": "すがぬま けい子", "votes": 5833, "rate": 4.72}
             ]
           },
           "hirei": {

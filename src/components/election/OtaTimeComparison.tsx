@@ -29,6 +29,7 @@ import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 
 interface PartyResult {
   party: string;
+  candidateName?: string;
   votes: number;
   rate: number;
 }
@@ -58,6 +59,16 @@ interface DistrictVotesData {
   districts: DistrictVoteEntry[];
 }
 
+interface GenderData {
+  maleEligible: number;
+  femaleEligible: number;
+  maleVoters: number;
+  femaleVoters: number;
+  maleTurnout: number;
+  femaleTurnout: number;
+  totalTurnout: number;
+}
+
 interface OtaTimeComparisonProps {
   syosenkyoku2024: PartyResult[];
   syosenkyoku2026: PartyResult[];
@@ -69,6 +80,8 @@ interface OtaTimeComparisonProps {
   totalVotesHirei2026: number;
   districts2024: DistrictData[];
   districts2026: DistrictData[];
+  genderData2024: GenderData | null;
+  genderData2026: GenderData | null;
 }
 
 interface CustomTooltipProps {
@@ -155,6 +168,8 @@ export function OtaTimeComparison({
   totalVotesHirei2026,
   districts2024,
   districts2026,
+  genderData2024,
+  genderData2026,
 }: OtaTimeComparisonProps) {
   // 投票区別得票データ（2026年のみ）
   const [districtVotesData, setDistrictVotesData] = useState<DistrictVotesData | null>(null);
@@ -232,6 +247,45 @@ export function OtaTimeComparison({
       return entry;
     });
   }, [districtVotesData]);
+
+  // 投票率内訳（当日・期日前・不在者）
+  const turnoutBreakdown = useMemo(() => {
+    if (!districts2024.length || !districts2026.length) return [];
+    const eligible2024 = districts2024.reduce((s, d) => s + d.dayOfEligibleVoters, 0);
+    const eligible2026 = districts2026.reduce((s, d) => s + d.dayOfEligibleVoters, 0);
+    const dayOf2024 = districts2024.reduce((s, d) => s + d.dayOfVoters, 0);
+    const dayOf2026 = districts2026.reduce((s, d) => s + d.dayOfVoters, 0);
+    const early2024 = districts2024.reduce((s, d) => s + d.earlyVoters, 0);
+    const early2026 = districts2026.reduce((s, d) => s + d.earlyVoters, 0);
+    const absentee2024 = districts2024.reduce((s, d) => s + d.absenteeVoters, 0);
+    const absentee2026 = districts2026.reduce((s, d) => s + d.absenteeVoters, 0);
+    const items = [
+      {
+        category: '当日投票',
+        rate2024: (dayOf2024 / eligible2024) * 100,
+        rate2026: (dayOf2026 / eligible2026) * 100,
+        votes2024: dayOf2024,
+        votes2026: dayOf2026,
+      },
+      {
+        category: '期日前投票',
+        rate2024: (early2024 / eligible2024) * 100,
+        rate2026: (early2026 / eligible2026) * 100,
+        votes2024: early2024,
+        votes2026: early2026,
+      },
+    ];
+    if (absentee2024 > 0 || absentee2026 > 0) {
+      items.push({
+        category: '不在者投票',
+        rate2024: (absentee2024 / eligible2024) * 100,
+        rate2026: (absentee2026 / eligible2026) * 100,
+        votes2024: absentee2024,
+        votes2026: absentee2026,
+      });
+    }
+    return items;
+  }, [districts2024, districts2026]);
 
   // 投票数変化サマリー
   const voteSummary = useMemo(() => {
@@ -420,6 +474,9 @@ export function OtaTimeComparison({
                   collapse: '急落',
                 }[swing];
 
+                const candidate2024 = syosenkyoku2024.find((p) => p.party === party.party);
+                const candidate2026 = syosenkyoku2026.find((p) => p.party === party.party);
+
                 return (
                   <div key={party.party} className="space-y-1">
                     <div className="flex items-center justify-between">
@@ -428,7 +485,16 @@ export function OtaTimeComparison({
                           className="w-3 h-3 rounded-full"
                           style={{ backgroundColor: getPartyColor(party.party) }}
                         />
-                        <span className="font-medium text-sm">{party.party}</span>
+                        <div>
+                          <span className="font-medium text-sm">{party.party}</span>
+                          {(candidate2024?.candidateName || candidate2026?.candidateName) && (
+                            <p className="text-xs text-muted-foreground">
+                              {candidate2024?.candidateName && `2024: ${candidate2024.candidateName}`}
+                              {candidate2024?.candidateName && candidate2026?.candidateName && ' → '}
+                              {candidate2026?.candidateName && `2026: ${candidate2026.candidateName}`}
+                            </p>
+                          )}
+                        </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <Badge
@@ -464,6 +530,7 @@ export function OtaTimeComparison({
                     </div>
                     <div className="flex justify-between text-xs text-muted-foreground">
                       <span>2024: {formatPercent(party.rate2024)}</span>
+                      <span>→</span>
                       <span>2026: {formatPercent(party.rate2026)}</span>
                     </div>
                   </div>
@@ -570,6 +637,168 @@ export function OtaTimeComparison({
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* 投票率内訳（当日・期日前・不在者） */}
+      {turnoutBreakdown.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">投票率内訳比較（2024年 vs 2026年）</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xs text-muted-foreground mb-4">
+              当日投票・期日前投票の内訳（有権者数に対する割合）
+            </p>
+            <ResponsiveContainer width="100%" height={260}>
+              <BarChart data={turnoutBreakdown}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="category" />
+                <YAxis tickFormatter={(v) => `${v.toFixed(0)}%`} domain={[0, 40]} />
+                <Tooltip
+                  content={({ active, payload, label }) => {
+                    if (active && payload && payload.length) {
+                      const data = payload[0].payload;
+                      return (
+                        <div className="bg-popover border rounded-lg shadow-lg p-3 text-sm">
+                          <p className="font-bold mb-2">{label}</p>
+                          <div className="space-y-1">
+                            <div className="flex justify-between gap-4">
+                              <span className="text-blue-600">2024年:</span>
+                              <span className="font-mono">
+                                {data.rate2024.toFixed(2)}% ({formatNumber(data.votes2024)}票)
+                              </span>
+                            </div>
+                            <div className="flex justify-between gap-4">
+                              <span className="text-orange-600">2026年:</span>
+                              <span className="font-mono">
+                                {data.rate2026.toFixed(2)}% ({formatNumber(data.votes2026)}票)
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    }
+                    return null;
+                  }}
+                />
+                <Legend />
+                <Bar dataKey="rate2024" name="2024年" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="rate2026" name="2026年" fill="#f97316" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* 男女別投票率比較 */}
+      {genderData2024 && genderData2026 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">男女別投票率比較（2024年 vs 2026年）</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* 投票率グラフ */}
+              <div>
+                <p className="text-xs text-muted-foreground mb-3">男女別総投票率の比較</p>
+                <ResponsiveContainer width="100%" height={220}>
+                  <BarChart
+                    data={[
+                      {
+                        gender: '男性',
+                        turnout2024: genderData2024.maleTurnout,
+                        turnout2026: genderData2026.maleTurnout,
+                        diff: genderData2026.maleTurnout - genderData2024.maleTurnout,
+                      },
+                      {
+                        gender: '女性',
+                        turnout2024: genderData2024.femaleTurnout,
+                        turnout2026: genderData2026.femaleTurnout,
+                        diff: genderData2026.femaleTurnout - genderData2024.femaleTurnout,
+                      },
+                      {
+                        gender: '合計',
+                        turnout2024: genderData2024.totalTurnout,
+                        turnout2026: genderData2026.totalTurnout,
+                        diff: genderData2026.totalTurnout - genderData2024.totalTurnout,
+                      },
+                    ]}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="gender" />
+                    <YAxis domain={[45, 75]} tickFormatter={(v) => `${v.toFixed(0)}%`} />
+                    <Tooltip
+                      content={({ active, payload, label }) => {
+                        if (active && payload && payload.length) {
+                          const d = payload[0].payload;
+                          return (
+                            <div className="bg-popover border rounded-lg shadow-lg p-3 text-sm">
+                              <p className="font-bold mb-2">{label}</p>
+                              <div className="space-y-1">
+                                <div className="flex justify-between gap-4">
+                                  <span className="text-blue-600">2024年:</span>
+                                  <span className="font-mono">{d.turnout2024.toFixed(2)}%</span>
+                                </div>
+                                <div className="flex justify-between gap-4">
+                                  <span className="text-orange-600">2026年:</span>
+                                  <span className="font-mono">{d.turnout2026.toFixed(2)}%</span>
+                                </div>
+                                <div className="border-t pt-1 flex justify-between gap-4">
+                                  <span>変化:</span>
+                                  <span className={`font-mono font-bold ${d.diff > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                    {d.diff > 0 ? '+' : ''}{d.diff.toFixed(2)}pt
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
+                      }}
+                    />
+                    <Legend />
+                    <Bar dataKey="turnout2024" name="2024年" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                    <Bar dataKey="turnout2026" name="2026年" fill="#f97316" radius={[4, 4, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+              {/* 詳細数値 */}
+              <div>
+                <p className="text-xs text-muted-foreground mb-3">有権者数・投票者数の内訳</p>
+                <div className="space-y-3">
+                  {[
+                    { label: '男性', key: 'male', eligible24: genderData2024.maleEligible, voters24: genderData2024.maleVoters, turnout24: genderData2024.maleTurnout, eligible26: genderData2026.maleEligible, voters26: genderData2026.maleVoters, turnout26: genderData2026.maleTurnout },
+                    { label: '女性', key: 'female', eligible24: genderData2024.femaleEligible, voters24: genderData2024.femaleVoters, turnout24: genderData2024.femaleTurnout, eligible26: genderData2026.femaleEligible, voters26: genderData2026.femaleVoters, turnout26: genderData2026.femaleTurnout },
+                  ].map(({ label, key, eligible24, voters24, turnout24, eligible26, voters26, turnout26 }) => (
+                    <div key={key} className="border rounded-lg p-3 text-sm">
+                      <p className="font-medium mb-2">{label}</p>
+                      <div className="grid grid-cols-2 gap-2 text-xs">
+                        <div>
+                          <p className="text-blue-600 font-medium">2024年</p>
+                          <p>有権者: {formatNumber(eligible24)}人</p>
+                          <p>投票者: {formatNumber(voters24)}人</p>
+                          <p className="font-bold">{turnout24.toFixed(2)}%</p>
+                        </div>
+                        <div>
+                          <p className="text-orange-600 font-medium">2026年</p>
+                          <p>有権者: {formatNumber(eligible26)}人</p>
+                          <p>投票者: {formatNumber(voters26)}人</p>
+                          <p className="font-bold">{turnout26.toFixed(2)}%</p>
+                        </div>
+                      </div>
+                      <div className="mt-2 pt-2 border-t">
+                        <span className="text-xs text-muted-foreground">変化: </span>
+                        <span className={`text-xs font-bold ${(turnout26 - turnout24) > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                          {(turnout26 - turnout24) > 0 ? '+' : ''}{(turnout26 - turnout24).toFixed(2)}pt
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </CardContent>
         </Card>
       )}

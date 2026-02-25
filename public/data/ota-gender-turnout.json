@@ -1,0 +1,42 @@
+{
+  "4区": {
+    "2024": {
+      "maleEligible": 216662,
+      "femaleEligible": 210946,
+      "maleVoters": 113127,
+      "femaleVoters": 110531,
+      "maleTurnout": 52.21,
+      "femaleTurnout": 52.40,
+      "totalTurnout": 52.30
+    },
+    "2026": {
+      "maleEligible": 217311,
+      "femaleEligible": 212055,
+      "maleVoters": 123300,
+      "femaleVoters": 119163,
+      "maleTurnout": 56.74,
+      "femaleTurnout": 56.19,
+      "totalTurnout": 56.47
+    }
+  },
+  "26区": {
+    "2024": {
+      "maleEligible": 91580,
+      "femaleEligible": 103071,
+      "maleVoters": 55562,
+      "femaleVoters": 60657,
+      "maleTurnout": 60.67,
+      "femaleTurnout": 58.85,
+      "totalTurnout": 59.71
+    },
+    "2026": {
+      "maleEligible": 91804,
+      "femaleEligible": 103409,
+      "maleVoters": 60100,
+      "femaleVoters": 65335,
+      "maleTurnout": 65.47,
+      "femaleTurnout": 63.18,
+      "totalTurnout": 64.26
+    }
+  }
+}

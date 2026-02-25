@@ -1,0 +1,81 @@
+{
+  "region": "目黒区",
+  "senkyoku": "26区",
+  "years": {
+    "2024": {
+      "year": 2024,
+      "electionDate": "2024-10-27",
+      "note": "2024年は衆議院議員総選挙（東京26区全体から大田区分を差し引いた目黒区分）",
+      "syosenkyoku": {
+        "totalVotes": 124817,
+        "totalInvalidVotes": null,
+        "totalEligibleVoters": 236190,
+        "turnoutRate": 52.85,
+        "results": [
+          {"party": "無所属", "candidateName": "まつばら 仁", "votes": 50766, "rate": 40.67},
+          {"party": "自由民主党", "candidateName": "今岡 うえき", "votes": 38534, "rate": 30.87},
+          {"party": "日本共産党", "candidateName": "和田 正子", "votes": 23236, "rate": 18.62},
+          {"party": "参政党", "candidateName": "ふじた 久美", "votes": 10164, "rate": 8.14},
+          {"party": "無所属②", "candidateName": "たぶち 正文", "votes": 2117, "rate": 1.70}
+        ]
+      },
+      "hirei": {
+        "totalVotes": 126943,
+        "totalInvalidVotes": 2822,
+        "totalEligibleVoters": 236190,
+        "turnoutRate": 52.85,
+        "results": [
+          {"party": "自由民主党", "votes": 31062, "rate": 24.47},
+          {"party": "立憲民主党", "votes": 26514, "rate": 20.89},
+          {"party": "国民民主党", "votes": 20054, "rate": 15.80},
+          {"party": "日本維新の会", "votes": 10288, "rate": 8.10},
+          {"party": "日本共産党", "votes": 9518, "rate": 7.50},
+          {"party": "れいわ新選組", "votes": 9182, "rate": 7.23},
+          {"party": "公明党", "votes": 8146, "rate": 6.42},
+          {"party": "参政党", "votes": 5408, "rate": 4.26},
+          {"party": "日本保守党", "votes": 4483, "rate": 3.53},
+          {"party": "社会民主党", "votes": 1842, "rate": 1.45},
+          {"party": "みんなでつくる党", "votes": 446, "rate": 0.35}
+        ]
+      }
+    },
+    "2026": {
+      "year": 2026,
+      "electionDate": "2026-02-08",
+      "note": "2026年は衆議院議員補欠選挙（東京26区）",
+      "syosenkyoku": {
+        "totalVotes": 142569,
+        "totalInvalidVotes": 2413,
+        "totalEligibleVoters": 144984,
+        "turnoutRate": 61.25,
+        "results": [
+          {"party": "自由民主党", "candidateName": "今岡 うえき", "votes": 52287, "rate": 36.67},
+          {"party": "無所属", "candidateName": "まつばら 仁", "votes": 37702, "rate": 26.44},
+          {"party": "チームみらい", "candidateName": "うさみ 登", "votes": 20344, "rate": 14.27},
+          {"party": "国民民主党", "candidateName": "坂元 ゆうき", "votes": 13846, "rate": 9.71},
+          {"party": "日本共産党", "candidateName": "松井 かな子", "votes": 11151, "rate": 7.82},
+          {"party": "参政党", "candidateName": "すがぬま けい子", "votes": 7239, "rate": 5.08}
+        ]
+      },
+      "hirei": {
+        "totalVotes": 143614,
+        "totalInvalidVotes": 1346,
+        "totalEligibleVoters": 144973,
+        "turnoutRate": 61.25,
+        "results": [
+          {"party": "自由民主党", "votes": 48035, "rate": 33.45},
+          {"party": "チームみらい", "votes": 25883, "rate": 18.02},
+          {"party": "中道改革連合", "votes": 18958, "rate": 13.20},
+          {"party": "国民民主党", "votes": 15190, "rate": 10.58},
+          {"party": "日本維新の会", "votes": 8125, "rate": 5.66},
+          {"party": "参政党", "votes": 8011, "rate": 5.58},
+          {"party": "日本共産党", "votes": 7905, "rate": 5.50},
+          {"party": "日本保守党", "votes": 4413, "rate": 3.07},
+          {"party": "れいわ新選組", "votes": 3469, "rate": 2.42},
+          {"party": "減税日本・ゆうこく連合", "votes": 2011, "rate": 1.40},
+          {"party": "社会民主党", "votes": 1614, "rate": 1.12}
+        ]
+      }
+    }
+  }
+}

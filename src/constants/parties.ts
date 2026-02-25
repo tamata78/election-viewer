@@ -16,7 +16,9 @@ export const PARTIES: Party[] = [
   { id: 'chudo', name: '中道改革連合', shortName: '中道', color: '#9370db' },
   { id: 'genzei', name: '減税日本・ゆうこく連合', shortName: '減税', color: '#20b2aa' },
   { id: 'ind', name: '無所属', shortName: '無所属', color: '#808080' },
+  { id: 'ind2', name: '無所属②', shortName: '無所属②', color: '#a0a0a0' },
   { id: 'honnin', name: '本人届出', shortName: '本人届出', color: '#666666' },
+  { id: 'minnade', name: 'みんなでつくる党', shortName: 'みんなで', color: '#7cb9e8' },
   { id: 'other', name: 'その他', shortName: 'その他', color: '#cccccc' },
 ];
 
